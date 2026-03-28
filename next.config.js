@@ -125,6 +125,22 @@ module.exports = {
               "frame-ancestors 'none'",
               "object-src 'none'"
             ].join('; ')
+          },
+          // Required: popup opener reference is severed when the OAuth popup navigates
+          // through GitHub (cross-origin). unsafe-none allows the popup to retain
+          // window.opener after returning to the same-origin callback.
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'unsafe-none'
+          }
+        ]
+      },
+      {
+        source: '/api/auth/:path*',
+        headers: [
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'unsafe-none'
           }
         ]
       }

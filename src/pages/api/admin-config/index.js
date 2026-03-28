@@ -1,13 +1,8 @@
-# local_backend: true
+const REPO = 'brendoarrudaa/site-movisul';
+const BRANCH = 'main';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://site-movisul.vercel.app';
 
-backend:
-  name: github
-  repo: brendoarrudaa/site-movisul
-  branch: main
-  # Para producao na Vercel, descomente as linhas abaixo e configure o OAuth:
-  base_url: https://site-movisul.vercel.app
-  auth_endpoint: /api/auth
-
+const SHARED_CONFIG = `
 media_folder: public/assets/img
 public_folder: /assets/img
 
@@ -68,3 +63,20 @@ collections:
           - UX
           - Devops
       - { label: "Conteudo", name: "body", widget: "markdown" }
+`.trimStart();
+
+function buildConfig() {
+  const isDev = process.env.NODE_ENV !== 'production';
+
+  const backend = isDev
+    ? `local_backend: true\n\nbackend:\n  name: github\n  repo: ${REPO}\n  branch: ${BRANCH}`
+    : `backend:\n  name: github\n  repo: ${REPO}\n  branch: ${BRANCH}\n  base_url: ${SITE_URL}\n  auth_endpoint: /api/auth`;
+
+  return `${backend}\n\n${SHARED_CONFIG}`;
+}
+
+export default function handler(req, res) {
+  res.setHeader('Content-Type', 'text/yaml; charset=utf-8');
+  res.setHeader('Cache-Control', 'no-store');
+  res.status(200).send(buildConfig());
+}

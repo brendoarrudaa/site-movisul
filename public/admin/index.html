@@ -4,8 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gerenciador de Conteudo - Movisul</title>
+    <link rel="cms-config-url" type="text/yaml" href="/api/admin-config" />
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms-locales@^3.0.0/dist/decap-cms-locales.js"></script>
+    <script>
+      CMS.registerLocale('pt', window.DecapCmsLocales.pt);
+      CMS.init({ config: { locale: 'pt' } });
+    </script>
   </body>
 </html>
