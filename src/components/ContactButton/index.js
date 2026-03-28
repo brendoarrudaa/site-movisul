@@ -6,7 +6,7 @@ const ContactButton = () => {
   const [isHovered, setIsHovered] = useState(false)
 
   const handleClick = () => {
-    const whatsappUrl = `https://wa.me/5521976134090?text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.`
+    const whatsappUrl = `https://wa.me/5566997188890?text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.`
     window.open(whatsappUrl, '_blank')
   }
 

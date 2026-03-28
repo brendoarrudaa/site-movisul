@@ -28,7 +28,7 @@ const organizationSchema = {
     '@type': 'ContactPoint',
     contactType: 'customer support',
     email: 'contato@movisul.com',
-    telephone: '+55-21-97613-4090',
+    telephone: '+55-66-99718-8890',
     availableLanguage: 'Portuguese'
   },
   address: {
