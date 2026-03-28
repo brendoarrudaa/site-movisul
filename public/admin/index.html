@@ -3,10 +3,40 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="cms-config-url" type="application/json" href="/admin/config.yml" />
     <title>Content Manager</title>
   </head>
   <body>
+    <script>window.CMS_MANUAL_INIT = true;</script>
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <script>
+      CMS.init({
+        config: {
+          load_config_file: false,
+          backend: {
+            name: 'github',
+            repo: 'quicklab-tech/quicklab.tech',
+            branch: 'main',
+            base_url: 'https://site-movisul.vercel.app',
+            auth_endpoint: '/api/auth'
+          },
+          media_folder: 'public/images/uploads',
+          public_folder: '/images/uploads',
+          collections: [
+            {
+              name: 'posts',
+              label: 'Posts',
+              folder: 'posts',
+              create: true,
+              slug: '{{slug}}',
+              fields: [
+                { label: 'Title', name: 'title', widget: 'string' },
+                { label: 'Date', name: 'date', widget: 'datetime' },
+                { label: 'Body', name: 'body', widget: 'markdown' }
+              ]
+            }
+          ]
+        }
+      });
+    </script>
   </body>
 </html>

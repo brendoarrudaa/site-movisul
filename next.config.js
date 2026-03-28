@@ -107,8 +107,24 @@ module.exports = {
         headers: securityHeaders
       },
       {
-        source: '/admin',
+        source: '/admin/:path*',
         headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://identity.netlify.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: blob: https:",
+              "font-src 'self' data: https:",
+              "connect-src 'self' https://unpkg.com https://api.github.com https://github.com",
+              "frame-src 'self'",
+              "form-action 'self'",
+              "base-uri 'self'",
+              "frame-ancestors 'none'",
+              "object-src 'none'"
+            ].join('; ')
+          },
           {
             key: 'Cross-Origin-Opener-Policy',
             value: 'unsafe-none'
