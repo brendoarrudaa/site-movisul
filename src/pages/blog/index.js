@@ -15,7 +15,7 @@ const Post = ({ posts }) => {
         {generateNextSeo({
           title: 'Nosso Blog | Movisul',
           description:
-            'O que oferecemos como serviço vai além do desenvolvimento do software.',
+            'Conteúdo técnico sobre Saúde e Segurança do Trabalho: PGR, PCMSO, eSocial, laudos, treinamentos e muito mais.',
           canonical: 'https://movisul.com/blog',
           openGraph: {
             images: [
