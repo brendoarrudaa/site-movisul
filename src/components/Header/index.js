@@ -99,17 +99,23 @@ export function Navbar() {
           </button>
           <button
             onClick={() => setOpen(!open)}
-            className="text-[#1a202c] dark:text-gray-200 p-1"
+            className="text-[#1a202c] dark:text-gray-200 p-1 transition-transform duration-300"
             aria-label="Menu"
           >
-            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <span className={`block transition-all duration-300 ${open ? 'rotate-90 opacity-80' : 'rotate-0 opacity-100'}`}>
+              {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </span>
           </button>
         </div>
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 px-4 pb-4 space-y-1">
+      <div
+        className={`md:hidden overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out ${
+          open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        } bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800`}
+      >
+        <div className="px-4 pb-4 space-y-1">
           {navLinks.map(l => (
             <Link
               key={l.href}
@@ -128,7 +134,7 @@ export function Navbar() {
             Falar com especialista
           </Link>
         </div>
-      )}
+      </div>
     </nav>
   )
 }
