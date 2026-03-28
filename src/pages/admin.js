@@ -12,17 +12,12 @@ export async function getServerSideProps({ req, res }) {
     <title>Gerenciador de Conteúdo — Movisul</title>
   </head>
   <body>
-    <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js" integrity="sha384-5YB/DZklEMj4X4fIhBQJMoX6lMkXAJwZ2Ek5yyBkdH4z+ZHzJY9CzBfL6DQNTZ8" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/netlify-cms-locales@1.5.0/dist/locale-pt.js" integrity="sha384-diOgeiy5vZ4CrubxqsmShbo1nYYvsC2CmiFv8uc+jhC8gc6SxdmolvTYhaRFq8XQ" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
     <script>
       window.CMS_MANUAL_INIT = true
       window.addEventListener('load', function () {
-        if (window.netlifyLocales && window.netlifyLocales.pt) {
-          CMS.registerLocale('pt', window.netlifyLocales.pt)
-        }
         CMS.init({
           config: {
-            locale: 'pt',
             backend: { name: 'github', repo: 'brendoarrudaa/site-movisul', branch: 'main' },
             local_backend: false,
             media_folder: 'public/assets/img',
