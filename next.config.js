@@ -3,12 +3,13 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 const scriptSrc = [
   "'self'",
   "'unsafe-inline'",
+  "'unsafe-eval'",
   'https://unpkg.com',
   'https://identity.netlify.com'
 ]
 
 if (isDevelopment) {
-  scriptSrc.push("'unsafe-eval'", 'blob:')
+  scriptSrc.push('blob:')
 }
 
 const connectSrc = [
