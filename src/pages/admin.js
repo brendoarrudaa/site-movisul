@@ -2,7 +2,7 @@ export default function AdminCMS() {
   return null
 }
 
-export async function getServerSideProps({ req, res }) {
+export async function getServerSideProps({ res }) {
   res.setHeader('Content-Type', 'text/html')
   res.write(`<!DOCTYPE html>
 <html lang="pt-br">
@@ -18,7 +18,7 @@ export async function getServerSideProps({ req, res }) {
       window.addEventListener('load', function () {
         CMS.init({
           config: {
-            backend: { name: 'github', repo: 'brendoarrudaa/site-movisul', branch: 'main' },
+            backend: { name: 'github', repo: 'brendoarrudaa/site-movisul', branch: 'main', base_url: 'https://site-movisul.vercel.app', auth_endpoint: '/api/auth' },
             local_backend: false,
             media_folder: 'public/assets/img',
             public_folder: '/assets/img',
