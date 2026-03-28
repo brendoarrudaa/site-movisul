@@ -104,7 +104,7 @@ module.exports = {
   async headers() {
     return [
       {
-        source: '/:path*',
+        source: '/((?!admin(?:/.*)?$).*)',
         headers: securityHeaders
       },
       // /admin and /admin/* need COOP: unsafe-none so the OAuth popup retains
