@@ -107,15 +107,6 @@ module.exports = {
         headers: securityHeaders
       },
       {
-        source: '/admin',
-        headers: [
-          {
-            key: 'Cross-Origin-Opener-Policy',
-            value: 'unsafe-none'
-          }
-        ]
-      },
-      {
         source: '/admin/:path*',
         headers: [
           {
@@ -133,19 +124,6 @@ module.exports = {
               "frame-ancestors 'none'",
               "object-src 'none'"
             ].join('; ')
-          },
-          {
-            key: 'Cross-Origin-Opener-Policy',
-            value: 'unsafe-none'
-          }
-        ]
-      },
-      {
-        source: '/api/callback',
-        headers: [
-          {
-            key: 'Cross-Origin-Opener-Policy',
-            value: 'unsafe-none'
           }
         ]
       }
