@@ -3,13 +3,6 @@ export default function AdminCMS() {
 }
 
 export async function getServerSideProps({ req, res }) {
-  const host = req.headers.host || ''
-  const isLocal = host.startsWith('localhost') || host.startsWith('127.0.0.1')
-  if (!isLocal && process.env.NODE_ENV === 'production' && !req.headers['x-netlify-user']) {
-    res.writeHead(401, { 'WWW-Authenticate': 'Bearer' })
-    res.end('Unauthorized')
-    return { props: {} }
-  }
   res.setHeader('Content-Type', 'text/html')
   res.write(`<!DOCTYPE html>
 <html lang="pt-br">
@@ -30,7 +23,7 @@ export async function getServerSideProps({ req, res }) {
         CMS.init({
           config: {
             locale: 'pt',
-            backend: { name: 'github', repo: 'quicklab-tech/site-geilson', branch: 'main' },
+            backend: { name: 'github', repo: 'brendoarrudaa/site-movisul', branch: 'main' },
             local_backend: false,
             media_folder: 'public/assets/img',
             public_folder: '/assets/img',
