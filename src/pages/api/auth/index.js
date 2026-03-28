@@ -12,7 +12,7 @@ export default function handler(req, res) {
   const params = new URLSearchParams({
     client_id: process.env.OAUTH_CLIENT_ID,
     redirect_uri: `${process.env.NEXT_PUBLIC_SITE_URL}/api/auth/callback`,
-    scope: 'repo,user',
+    scope: 'repo user',
     state,
   });
 
