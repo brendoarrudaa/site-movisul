@@ -12,12 +12,11 @@ export async function getServerSideProps({ res }) {
     <title>Gerenciador de Conteúdo — Movisul</title>
   </head>
   <body>
-    <script src="https://unpkg.com/react@^18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@^18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/decap-cms-app/dist/decap-cms-app.js"></script>
+    <script>window.CMS_MANUAL_INIT = true;</script>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
       window.addEventListener('load', function () {
-        DecapCmsApp.init({
+        CMS.init({
           load_config_file: false,
           config: {
             backend: { name: 'github', repo: 'brendoarrudaa/site-movisul', branch: 'main', base_url: 'https://site-movisul.vercel.app', auth_endpoint: '/api/auth' },
