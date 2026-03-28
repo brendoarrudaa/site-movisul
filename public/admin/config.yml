@@ -2,8 +2,8 @@ backend:
   name: github
   repo: brendoarrudaa/site-movisul
   branch: main
-  base_url: https://site-movisul.vercel.app
-  auth_endpoint: /api/auth
+  auth_type: pkce
+  app_id: Ov23liFCfXmVXLnS1H14
 
 local_backend: true
 
