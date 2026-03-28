@@ -107,6 +107,15 @@ module.exports = {
         headers: securityHeaders
       },
       {
+        source: '/admin',
+        headers: [
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'unsafe-none'
+          }
+        ]
+      },
+      {
         source: '/admin/:path*',
         headers: [
           {
