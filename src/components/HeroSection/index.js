@@ -16,7 +16,7 @@ const HeroSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-linear-to-r from-[#0a2e4f]/90 via-[#0f4c81]/80 to-[#0a2e4f]/60" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-32 sm:py-32">
         <div className="max-w-3xl">
           <div className="flex items-center gap-2 mb-6 animate-fade-up">
             <span className="inline-flex items-center gap-2 rounded-full bg-[#2a9d6e]/20 border border-[#2a9d6e]/30 px-4 py-1.5 text-sm font-medium text-[#34c785]">

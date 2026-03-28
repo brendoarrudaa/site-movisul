@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 export const ButtonContainer = styled.div`
   .btn-wapp {
     position: fixed;
-    bottom: 0;
+    bottom: 1rem;
     right: 0.5rem;
     z-index: 99;
 
