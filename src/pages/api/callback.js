@@ -1,69 +1,53 @@
-import { AuthorizationCode } from 'simple-oauth2'
-
-const config = {
-  client: {
-    id: process.env.OAUTH_CLIENT_ID || '',
-    secret: process.env.OAUTH_CLIENT_SECRET || ''
-  },
-  auth: {
-    tokenHost: process.env.OAUTH_HOST || 'https://github.com',
-    tokenPath: process.env.OAUTH_TOKEN_PATH || '/login/oauth/access_token',
-    authorizePath: process.env.OAUTH_AUTHORIZE_PATH || '/login/oauth/authorize'
-  }
-}
-
-function renderResponse(status, content) {
-  return `<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Authorizing ...</title>
-  </head>
-  <body>
-    <p id="message"></p>
-    <script>
-      function sendMessage(message) {
-        document.getElementById("message").innerText = message;
-        document.title = message;
-      }
-      function receiveMessage(message) {
-        console.debug("receiveMessage", message);
-        window.opener.postMessage(
-          'authorization:github:${status}:${JSON.stringify(content)}',
-          message.origin
-        );
-        window.removeEventListener("message", receiveMessage, false);
-        sendMessage("Authorized, closing ...");
-      }
-      sendMessage("Authorizing ...");
-      window.addEventListener("message", receiveMessage, false);
-      console.debug("postMessage", "authorizing:github", "*");
-      window.opener.postMessage("authorizing:github", "*");
-    </script>
-  </body>
-</html>`
-}
-
 export default async function handler(req, res) {
-  try {
-    const code = req.query.code
-    const { host } = req.headers
+  const { code } = req.query
+  const { OAUTH_CLIENT_ID, OAUTH_CLIENT_SECRET } = process.env
 
-    const client = new AuthorizationCode(config)
-    const accessToken = await client.getToken({
-      code,
-      redirect_uri: `https://${host}/api/callback`
+  try {
+    const response = await fetch('https://github.com/login/oauth/access_token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        client_id: OAUTH_CLIENT_ID,
+        client_secret: OAUTH_CLIENT_SECRET,
+        code
+      })
     })
 
+    const data = await response.json()
+
+    if (data.error) {
+      throw new Error(data.error_description || data.error)
+    }
+
+    const content = JSON.stringify({ token: data.access_token, provider: 'github' })
+
     res.setHeader('Content-Type', 'text/html')
-    res.status(200).send(
-      renderResponse('success', {
-        token: accessToken.token.access_token,
-        provider: 'github'
-      })
-    )
+    res.status(200).send(`<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      (function() {
+        function receiveMessage(e) {
+          console.debug("receiveMessage", e);
+          window.opener.postMessage(
+            'authorization:github:success:${content}',
+            e.origin
+          );
+        }
+        window.addEventListener("message", receiveMessage, false);
+        window.opener.postMessage("authorizing:github", "*");
+      })()
+    </script>
+  </body>
+</html>`)
   } catch (e) {
     console.error('OAuth callback error:', e)
-    res.status(200).send(renderResponse('error', e))
+    res.setHeader('Content-Type', 'text/html')
+    res.status(200).send(`<!DOCTYPE html>
+<html>
+  <body>
+    <p>OAuth error: ${e.message}</p>
+  </body>
+</html>`)
   }
 }
