@@ -18,6 +18,7 @@ export async function getServerSideProps({ res }) {
       window.addEventListener('load', function () {
         CMS.init({
           config: {
+            load_config_file: false,
             backend: { name: 'github', repo: 'brendoarrudaa/site-movisul', branch: 'main', base_url: 'https://site-movisul.vercel.app', auth_endpoint: '/api/auth' },
             local_backend: false,
             media_folder: 'public/assets/img',
