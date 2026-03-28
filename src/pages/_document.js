@@ -33,8 +33,6 @@ export default class MyDocument extends Document {
       <Html lang="pt-BR" data-theme="movisul" data-scroll-behavior="smooth">
         <Head />
         <body>
-          <Main />
-          <NextScript />
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -66,6 +64,8 @@ export default class MyDocument extends Document {
             `
             }}
           />
+          <Main />
+          <NextScript />
         </body>
       </Html>
     )
