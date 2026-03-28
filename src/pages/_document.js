@@ -59,7 +59,15 @@ export default class MyDocument extends Document {
                   } catch (err) {}
                 }
 
-                setTheme(preferredTheme || 'light');
+                var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                var systemTheme = darkQuery.matches ? 'dark' : 'light';
+                setTheme(preferredTheme || systemTheme);
+
+                darkQuery.addEventListener('change', function(e) {
+                  if (!localStorage.getItem('theme')) {
+                    setTheme(e.matches ? 'dark' : 'light');
+                  }
+                });
               })();
             `
             }}
