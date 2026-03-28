@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-08 09:00:00
+date: 2026-03-21 09:00:00
 image: /assets/img/epi-como-evitar-falhas-de-gestao.webp
 title: "EPI na prática: como evitar falhas de gestão que comprometem a segurança"
 description: Entenda como organizar fornecimento, orientação e controle de EPI com mais efetividade.

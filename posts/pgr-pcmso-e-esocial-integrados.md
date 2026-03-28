@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-09 09:00:00
+date: 2026-03-22 09:00:00
 image: /assets/img/pgr-pcmso-e-esocial-integrados.webp
 title: "PGR, PCMSO e eSocial: por que integrar esses três pilares melhora a gestão de SST"
 description: Saiba como integrar PGR, PCMSO e eSocial para reduzir falhas e ganhar consistência em SST.

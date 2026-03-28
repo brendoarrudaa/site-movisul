@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-03-29 09:00:00
+date: 2026-03-12 09:00:00
 image: /assets/img/pcmso-como-proteger-a-saude-ocupacional.webp
 title: "PCMSO além do exame admissional: como proteger a saúde ocupacional de forma estratégica"
 description: Veja como o PCMSO deve acompanhar os riscos da empresa e apoiar decisões em saúde ocupacional.

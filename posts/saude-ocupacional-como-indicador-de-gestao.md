@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-05 09:00:00
+date: 2026-03-18 09:00:00
 image: /assets/img/saude-ocupacional-como-indicador-de-gestao.webp
 title: "Saúde ocupacional como indicador de gestão: o que sua empresa deveria acompanhar"
 description: Entenda como a saúde ocupacional pode orientar decisões e melhorar a prevenção na empresa.
