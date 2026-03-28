@@ -11,7 +11,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "connect-src 'self' https://unpkg.com https://api.github.com https://github.com blob:"
+          "value": "connect-src 'self' https://unpkg.com https://api.github.com https://github.com blob:; img-src 'self' blob: data: https://raw.githubusercontent.com"
         }
       ]
     }
