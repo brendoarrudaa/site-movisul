@@ -1,6 +1,11 @@
 export default async function handler(req, res) {
   const { code } = req.query
   const { OAUTH_CLIENT_ID, OAUTH_CLIENT_SECRET } = process.env
+  const host = req.headers['x-forwarded-host'] || req.headers.host
+  const redirectUri = `https://${host}/api/callback`
+
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate')
+  res.setHeader('Pragma', 'no-cache')
 
   try {
     const response = await fetch('https://github.com/login/oauth/access_token', {
@@ -9,7 +14,8 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         client_id: OAUTH_CLIENT_ID,
         client_secret: OAUTH_CLIENT_SECRET,
-        code
+        code,
+        redirect_uri: redirectUri
       })
     })
 
