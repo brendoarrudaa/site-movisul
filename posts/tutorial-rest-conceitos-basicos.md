@@ -6,15 +6,15 @@ title: "Tutorial REST: conceitos básicos"
 description: Talvez você já tenha ouvido falar sobre o REST. No momento de
   produção de novos projetos de desenvolvimento, ele se torna um mecanismo
   fundamental para a criação de interfaces bem definidas e ágeis.
-main-class: web
-color: "#8257e6"
+main-class: treinamentos
+color: "#8e44ad"
 tags:
-  - rest
-  - web
-  - developer
-  - api
-  - http
-categories: WEB
+  - treinamentos
+  - capacitacao
+  - tecnologia
+  - esocial
+  - sistemas
+categories: Treinamentos
 ---
 ## **O que é REST?**
 

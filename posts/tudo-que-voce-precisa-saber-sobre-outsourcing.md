@@ -7,14 +7,14 @@ description: Você já ouviu falar no Outsourcing? O termo, que vem ganhando
   bastante popularidade ao longo dos últimos anos, expandiu ainda mais sua rede
   de aplicação ao longo de 2023, principalmente nos setores da tecnologia de
   informação, como é o caso da computação em nuvem.
-main-class: outsourcing
-color: "#EB7728"
+main-class: gestao-riscos
+color: "#1a6fa8"
 tags:
-  - aplicação
-  - ios
-  - android
-  - ""
-categories: Outsourcing
+  - gestao
+  - riscos
+  - outsourcing
+  - conformidade
+categories: Gestao de Riscos
 ---
 Em uma pesquisa realizada pela Deloitte, foi constatado que mais de 90% das empresas utilizam o Outsourcing para as entregas deste setor.
 

@@ -8,17 +8,15 @@ description: Flutter é um framework de desenvolvimento de aplicativos móveis
   nativos para iOS, Android, web e desktop a partir de uma única base de código.
   Ele utiliza a linguagem de programação Dart, que foi criada pelo Google em
   2011 e que oferece uma sintaxe fácil de entender e depurar.
-main-class: devops
-color: "#B31917"
+main-class: treinamentos
+color: "#8e44ad"
 tags:
+  - treinamentos
+  - capacitacao
+  - tecnologia
   - flutter
   - framework
-  - desenvolvimento
-  - apps
-  - aplicativos
-  - google
-  - dart
-categories: Devops
+categories: Treinamentos
 ---
 <!--StartFragment-->
 

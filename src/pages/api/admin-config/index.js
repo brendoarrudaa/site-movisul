@@ -26,42 +26,39 @@ collections:
         name: "main-class"
         widget: "select"
         options:
-          - ia
-          - aplicativos
-          - web
-          - software
-          - outsourcing
-          - qa
-          - design
-          - ux
-          - devops
+          - sst
+          - gestao-riscos
+          - laudos
+          - esocial
+          - seguranca
+          - treinamentos
+          - saude-ocupacional
+          - prevencao
       - label: "Cor"
         name: "color"
         widget: "select"
         options:
-          - { label: "IA", value: "#02b7ff" }
-          - { label: "Aplicativos", value: "#02d7ff" }
-          - { label: "WEB", value: "#8257e6" }
-          - { label: "Software", value: "#D6BA32" }
-          - { label: "Outsourcing", value: "#EB7728" }
-          - { label: "QA", value: "#7D669E" }
-          - { label: "Design", value: "#637a91" }
-          - { label: "UX", value: "#7AAB13" }
-          - { label: "Devops", value: "#B31917" }
+          - { label: "SST", value: "#0f4c81" }
+          - { label: "Gestao de Riscos", value: "#1a6fa8" }
+          - { label: "Laudos Tecnicos", value: "#2a9d6e" }
+          - { label: "eSocial", value: "#1d7a55" }
+          - { label: "Seguranca", value: "#e67e22" }
+          - { label: "Treinamentos", value: "#8e44ad" }
+          - { label: "Saude Ocupacional", value: "#c0392b" }
+          - { label: "Prevencao", value: "#d35400" }
       - { label: "Tags", name: "tags", widget: "list", default: [""] }
       - label: "Categoria Label"
         name: "categories"
         widget: "select"
         options:
-          - IA
-          - Aplicativos
-          - WEB
-          - Software
-          - Outsourcing
-          - QA
-          - Design
-          - UX
-          - Devops
+          - SST
+          - Gestao de Riscos
+          - Laudos Tecnicos
+          - eSocial
+          - Seguranca
+          - Treinamentos
+          - Saude Ocupacional
+          - Prevencao
       - { label: "Conteudo", name: "body", widget: "markdown" }
 `.trimStart();
 

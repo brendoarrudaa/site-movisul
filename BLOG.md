@@ -1,139 +1,172 @@
 # Guia de Postagem — Blog Movisul
 
-## Como fazer login no CMS
+## Acesso ao CMS
 
-1. Inicie o servidor com o comando:
-   ```bash
-   npm run dev:cms
-   ```
-2. Acesse no navegador: [http://localhost:3000/admin](http://localhost:3000/admin)
-3. O CMS abrirá sem pedido de senha (modo local — apenas para uso no computador)
-4. Clique em **Posts** no menu lateral para ver, criar ou editar posts
+### Localmente
+```bash
+npm run dev:cms
+```
+Acesse: [http://localhost:3000/admin](http://localhost:3000/admin)
+Não exige senha — usa o backend local.
+
+### Em produção
+Acesse: [https://site-movisul.vercel.app/admin](https://site-movisul.vercel.app/admin)
+Clique em **Login with GitHub** e autorize com sua conta.
 
 ---
 
-## Como criar um novo post
+## Criando um novo post
 
 1. No CMS, clique em **Posts** → **New Posts**
-2. Preencha todos os campos (veja detalhes abaixo)
-3. Escreva o conteúdo na aba **Body** usando Markdown
-4. Clique em **Publish** para salvar o arquivo `.md` na pasta `/posts`
-5. O post aparece automaticamente no blog após o próximo build (`npm run build`)
+2. Preencha todos os campos (veja a tabela abaixo)
+3. Escreva o conteúdo na aba **Body**
+4. Clique em **Publish**
+   - **Local**: salva o arquivo `.md` diretamente em `/posts` — o post aparece após `npm run build`
+   - **Produção**: abre um Pull Request no GitHub — o Vercel faz o deploy automaticamente após o merge
 
 ---
 
-## Campos do post
+## Campos obrigatórios
 
-| Campo | Obrigatório | Descrição |
+| Campo | Obrigatório | O que é |
 |---|---|---|
-| **Title** | Sim | Título principal. Será usado como nome do arquivo (slug) |
-| **Date** | Sim | Data e hora da publicação |
-| **Image** | Recomendado | Caminho da imagem de capa. Ex: `/assets/img/minha-imagem.webp` |
-| **Description** | Sim | Resumo curto (1-2 frases). Aparece na listagem e no Google |
-| **Main Class** | Sim | Categoria técnica — define a cor do destaque visual |
-| **Color** | Sim | Cor do post — escolha a que corresponde à Main Class |
-| **Tags** | Não | Palavras-chave separadas por vírgula |
-| **Category** | Sim | Categoria exibida no blog (versão com maiúscula da Main Class) |
-| **Body** | Sim | Conteúdo completo em Markdown |
+| **Titulo** | Sim | Título principal. Vira o slug do arquivo (ex: `como-usar-ia.md`) |
+| **Data** | Sim | Data e hora da publicação |
+| **Descricao** | Sim | Resumo curto — aparece na listagem e no Google. **Máximo 160 caracteres** |
+| **Categoria** | Sim | Define a cor e o filtro do post (ver tabela abaixo) |
+| **Cor** | Sim | Cor visual do post — deve corresponder à Categoria escolhida |
+| **Categoria Label** | Sim | Versão com maiúscula exibida no blog (ex: `IA`, `WEB`) |
+| **Imagem** | Recomendado | Caminho da imagem de capa. Salve antes em `/public/assets/img/` |
+| **Tags** | Não | Palavras-chave do post |
+| **Conteudo** | Sim | Corpo do post em Markdown |
 
-### Relação Main Class → Color → Category
+### Categoria → Cor → Label
 
-| Main Class | Color | Category |
+| Categoria | Cor | Label |
 |---|---|---|
-| `ia` | `#02b7ff` | `IA` |
-| `aplicativos` | `#02d7ff` | `Aplicativos` |
-| `web` | `#8257e6` | `WEB` |
-| `software` | `#D6BA32` | `Software` |
-| `outsourcing` | `#EB7728` | `Outsourcing` |
-| `qa` | `#7D669E` | `QA` |
-| `design` | `#637a91` | `Design` |
-| `ux` | `#7AAB13` | `UX` |
-| `devops` | `#B31917` | `Devops` |
+| `sst` | `#0f4c81` | `SST` |
+| `gestao-riscos` | `#1a6fa8` | `Gestao de Riscos` |
+| `laudos` | `#2a9d6e` | `Laudos Tecnicos` |
+| `esocial` | `#1d7a55` | `eSocial` |
+| `seguranca` | `#e67e22` | `Seguranca` |
+| `treinamentos` | `#8e44ad` | `Treinamentos` |
+| `saude-ocupacional` | `#c0392b` | `Saude Ocupacional` |
+| `prevencao` | `#d35400` | `Prevencao` |
 
 ---
 
-## Como montar um bom post
+## Como fazer um bom post
 
-### Estrutura recomendada
+### Tamanho ideal
+Entre **600 e 1500 palavras**. Posts muito curtos não rankeiam bem. Posts muito longos perdem o leitor.
 
-```
-# Título Principal (igual ao campo Title)
+### Título
+- Seja direto e use palavras que o leitor buscaria no Google
+- Formatos que funcionam bem:
+  - *"5 Motivos para..."*
+  - *"Como fazer X em Y passos"*
+  - *"O que é X e por que sua empresa precisa"*
+  - *"X erros que sua empresa comete em..."*
+- Evite títulos genéricos como *"Novidades"* ou *"Atualização"*
 
-Parágrafo de introdução — contextualiza o problema e o que o leitor vai aprender.
+### Descrição (meta description)
+- Máximo **160 caracteres** — o que passa disso é cortado no Google
+- Deve responder: *"O que o leitor vai aprender ou ganhar com esse post?"*
+- Inclua a palavra-chave principal
 
-## 1. Primeiro Tópico
+### Imagem de capa
+- Formato: `.webp` (menor e mais rápido que `.jpg` ou `.png`)
+- Resolução: **1200 × 630 px** (proporção ideal para compartilhamento)
+- Nome do arquivo: use o slug do post (ex: `reducao-custos-ia.webp`)
+- Onde salvar: `public/assets/img/nome-do-arquivo.webp`
+- Campo **Imagem** no CMS: `/assets/img/nome-do-arquivo.webp`
 
-Explicação do tópico. Use listas para destacar pontos importantes:
-
-* **Subtópico em negrito**: descrição curta
-* **Outro ponto**: descrição curta
-
-## 2. Segundo Tópico
-
-...repita o padrão para cada seção...
-
-## Conclusão
-
-Resumo do que foi abordado e chamada para ação (ex: fale com a Movisul).
-```
-
-### Boas práticas
-
-- **Título**: seja direto e use palavras que o leitor buscaria no Google. Ex: *"5 Motivos para...", "Como fazer...", "O que é..."*
-- **Descrição**: máximo 160 caracteres — é o texto que aparece no Google e na listagem do blog
-- **Imagem**: use `.webp` para melhor performance. Resolução recomendada: **1200x630px**. Salve em `/public/assets/img/`
-- **Tamanho ideal**: entre 600 e 1500 palavras
-- **Subtítulos**: use `##` para seções e `###` para subseções
-- **Negrito**: use `**texto**` para destacar termos importantes
-- **Listas**: prefira listas com bullet (`*`) para enumerar benefícios, passos ou exemplos
-- **Conclusão**: sempre finalize com um parágrafo resumindo e convidando o leitor a entrar em contato
-
-### Exemplo de imagem de capa
-
-Salve o arquivo em:
-```
-public/assets/img/nome-descritivo-do-post.webp
-```
-
-E no campo **Image** do CMS coloque:
-```
-/assets/img/nome-descritivo-do-post.webp
-```
-
----
-
-## Exemplo completo de post
+### Estrutura recomendada do conteúdo
 
 ```markdown
----
-layout: post
-date: 2026-03-25 10:00:00
-image: /assets/img/exemplo-post.webp
-title: Como a IA Pode Reduzir Custos na Sua Empresa
-description: Descubra como aplicar Inteligência Artificial para automatizar processos e reduzir custos operacionais de forma prática.
-main-class: ia
-color: "#02b7ff"
-tags:
-  - inteligência artificial
-  - redução de custos
-  - automação
-categories: IA
----
+Parágrafo de introdução — apresente o problema e o que o leitor vai aprender.
+Seja direto: 2 a 4 linhas.
 
-# Como a IA Pode Reduzir Custos na Sua Empresa
+## 1. Primeiro ponto importante
 
-A Inteligência Artificial deixou de ser exclusividade de grandes corporações...
+Desenvolva o tópico em 2 a 4 parágrafos.
+Use listas para facilitar a leitura:
 
-## 1. Automação de Tarefas Repetitivas
+- **Termo em destaque**: explicação curta
+- **Outro ponto**: explicação curta
 
-* **Processamento de documentos**: leitura e classificação automática
-* **Atendimento ao cliente**: chatbots resolvem dúvidas simples 24h
+## 2. Segundo ponto importante
 
-## 2. Redução de Erros Operacionais
+...repita o padrão...
+
+## 3. Terceiro ponto importante
 
 ...
 
 ## Conclusão
 
-Adotar IA é um passo estratégico. Entre em contato com a Movisul e descubra como podemos transformar sua operação.
+Resuma o que foi abordado em 2 a 3 frases.
+Finalize com uma chamada para ação — convide o leitor a entrar em contato com a Movisul.
+```
+
+### Boas práticas de formatação
+
+- Use `##` para seções principais e `###` para subseções
+- **Negrito** (`**texto**`) para destacar termos importantes — não exagere
+- Listas com `-` para benefícios, passos e exemplos
+- Blocos de código com ` ``` ` quando mostrar comandos ou exemplos técnicos
+- Parágrafos curtos — no máximo 4 linhas cada
+- Evite paredes de texto sem subtítulos
+
+### O que não fazer
+- Não copie conteúdo de outros sites
+- Não use título igual à descrição
+- Não publique sem imagem de capa
+- Não deixe o campo **Cor** diferente da **Categoria** escolhida
+
+---
+
+## Exemplo completo
+
+```markdown
+---
+layout: post
+date: 2026-03-28 09:00:00
+image: /assets/img/esocial-sst-conformidade.webp
+title: eSocial SST: O Que Sua Empresa Precisa Saber em 2025
+description: Entenda as obrigações do eSocial SST, quais eventos enviar e como manter sua empresa em conformidade com a legislação vigente.
+main-class: sst
+color: "#0f4c81"
+tags:
+  - seguranca do trabalho
+  - PGR
+  - normas regulamentadoras
+categories: SST
+---
+
+A adequação às normas de Saúde e Segurança do Trabalho deixou de ser opcional.
+Com o eSocial SST obrigatório, empresas de todos os portes precisam estar em conformidade.
+
+## 1. O que muda com o eSocial SST
+
+O envio dos eventos S-2210, S-2220 e S-2240 exige documentação atualizada e processos bem definidos.
+
+- **S-2210**: Comunicação de Acidente de Trabalho (CAT)
+- **S-2220**: Monitoramento da saúde do trabalhador (ASO)
+- **S-2240**: Condições ambientais do trabalho — agentes nocivos
+
+## 2. PGR e GRO atualizados
+
+O Programa de Gerenciamento de Riscos (PGR) substitui o antigo PPRA e exige revisão anual.
+Manter o documento desatualizado gera autuações e impede o envio correto ao eSocial.
+
+## 3. Como a Movisul pode ajudar
+
+Nossa equipe cuida de toda a documentação, laudos e envios ao governo.
+Você foca no seu negócio — nós garantimos a conformidade.
+
+## Conclusão
+
+Não espere a fiscalização chegar.
+Entre em contato com a Movisul e regularize sua empresa com segurança e agilidade.
 ```
