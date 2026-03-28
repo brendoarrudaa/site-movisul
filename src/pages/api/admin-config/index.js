@@ -1,8 +1,11 @@
-const REPO = 'brendoarrudaa/site-movisul';
-const BRANCH = 'main';
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://site-movisul.vercel.app';
+const REPO = 'brendoarrudaa/site-movisul'
+const BRANCH = 'main'
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://site-movisul.vercel.app'
 
 const SHARED_CONFIG = `
+locale: pt
+
 media_folder: public/assets/img
 public_folder: /assets/img
 
@@ -60,20 +63,20 @@ collections:
           - Saude Ocupacional
           - Prevencao
       - { label: "Conteudo", name: "body", widget: "markdown" }
-`.trimStart();
+`.trimStart()
 
 function buildConfig() {
-  const isDev = process.env.NODE_ENV !== 'production';
+  const isDev = process.env.NODE_ENV !== 'production'
 
   const backend = isDev
     ? `local_backend: true\n\nbackend:\n  name: github\n  repo: ${REPO}\n  branch: ${BRANCH}`
-    : `backend:\n  name: github\n  repo: ${REPO}\n  branch: ${BRANCH}\n  base_url: ${SITE_URL}\n  auth_endpoint: /api/auth`;
+    : `backend:\n  name: github\n  repo: ${REPO}\n  branch: ${BRANCH}\n  base_url: ${SITE_URL}\n  auth_endpoint: /api/auth`
 
-  return `${backend}\n\n${SHARED_CONFIG}`;
+  return `${backend}\n\n${SHARED_CONFIG}`
 }
 
 export default function handler(req, res) {
-  res.setHeader('Content-Type', 'text/yaml; charset=utf-8');
-  res.setHeader('Cache-Control', 'no-store');
-  res.status(200).send(buildConfig());
+  res.setHeader('Content-Type', 'text/yaml; charset=utf-8')
+  res.setHeader('Cache-Control', 'no-store')
+  res.status(200).send(buildConfig())
 }
