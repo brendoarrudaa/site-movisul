@@ -107,6 +107,35 @@ module.exports = {
         source: '/:path*',
         headers: securityHeaders
       },
+      // /admin and /admin/* need COOP: unsafe-none so the OAuth popup retains
+      // window.opener after navigating through GitHub (cross-origin).
+      // Note: '/admin/:path*' does NOT match '/admin' (no trailing slash),
+      // so both patterns are required.
+      {
+        source: '/admin',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://identity.netlify.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: blob: https:",
+              "font-src 'self' data: https:",
+              "connect-src 'self' https://unpkg.com https://api.github.com https://github.com",
+              "frame-src 'self'",
+              "form-action 'self'",
+              "base-uri 'self'",
+              "frame-ancestors 'none'",
+              "object-src 'none'"
+            ].join('; ')
+          },
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'unsafe-none'
+          }
+        ]
+      },
       {
         source: '/admin/:path*',
         headers: [
@@ -126,9 +155,15 @@ module.exports = {
               "object-src 'none'"
             ].join('; ')
           },
-          // Required: popup opener reference is severed when the OAuth popup navigates
-          // through GitHub (cross-origin). unsafe-none allows the popup to retain
-          // window.opener after returning to the same-origin callback.
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'unsafe-none'
+          }
+        ]
+      },
+      {
+        source: '/api/auth',
+        headers: [
           {
             key: 'Cross-Origin-Opener-Policy',
             value: 'unsafe-none'
