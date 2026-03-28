@@ -15,7 +15,9 @@ if (isDevelopment) {
 const connectSrc = [
   "'self'",
   'https://*.algolia.net',
-  'https://*.algolianet.com'
+  'https://*.algolianet.com',
+  'https://api.github.com',
+  'https://github.com'
 ]
 
 if (isDevelopment) {
@@ -103,6 +105,24 @@ module.exports = {
       {
         source: '/:path*',
         headers: securityHeaders
+      },
+      {
+        source: '/admin',
+        headers: [
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'unsafe-none'
+          }
+        ]
+      },
+      {
+        source: '/api/callback',
+        headers: [
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'unsafe-none'
+          }
+        ]
       }
     ]
   },
