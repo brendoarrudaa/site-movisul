@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import * as S from './styled'
-import { event } from 'lib/gtag'
 
 const CookiesAlert = ({ setOpen }) => {
   const handleAccept = () => {
@@ -8,11 +7,6 @@ const CookiesAlert = ({ setOpen }) => {
       localStorage.setItem('accept-cookies', 'true')
     }
     setOpen(true)
-    event({
-      action: 'click_politicas',
-      category: 'Modal Politicas',
-      label: 'Aceitar'
-    })
   }
 
   const handleReject = () => {
@@ -20,11 +14,6 @@ const CookiesAlert = ({ setOpen }) => {
       localStorage.setItem('accept-cookies', 'false')
     }
     setOpen(false)
-    event({
-      action: 'click_politicas',
-      category: 'Modal Politicas',
-      label: 'Recusar'
-    })
   }
 
   return (

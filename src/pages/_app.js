@@ -1,14 +1,11 @@
 /* eslint-disable react/no-unknown-property */
 
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import NextNProgress from 'nextjs-progressbar'
 
-import * as gtag from 'lib/gtag'
 import { generateDefaultSeo } from 'next-seo/pages'
 import SEO from '../../next-seo.config'
-import Analytics from 'components/Analytics'
 import CookiesAlert from 'components/CookiesAlert'
 
 import GlobalStyles from 'styles/global'
@@ -17,27 +14,14 @@ import 'styles/input.css'
 function App({ Component, pageProps }) {
   // null = não decidiu ainda, true = aceitou, false = recusou
   const [cookieConsent, setCookieConsent] = useState(null)
-  const router = useRouter()
 
   useEffect(() => {
     if (localStorage) {
       const stored = localStorage.getItem('accept-cookies')
       if (stored === 'true') setCookieConsent(true)
       else if (stored === 'false') setCookieConsent(false)
-      // se não há valor salvo, mantém null (exibe banner)
     }
   }, [])
-
-  useEffect(() => {
-    if (!cookieConsent) return
-    const handleRouteChange = url => {
-      gtag.pageview(url)
-    }
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events, cookieConsent])
 
   const handleCookieDecision = accepted => {
     setCookieConsent(accepted)
@@ -69,7 +53,6 @@ function App({ Component, pageProps }) {
         showSpinner={false}
       />
       <Component {...pageProps} />
-      {cookieConsent === true && <Analytics />}
       {cookieConsent === null && (
         <CookiesAlert setOpen={handleCookieDecision} />
       )}

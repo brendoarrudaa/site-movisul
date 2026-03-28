@@ -2,20 +2,17 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 
 const scriptSrc = [
   "'self'",
-  'https://www.googletagmanager.com',
-  'https://www.google-analytics.com',
+  "'unsafe-inline'",
   'https://unpkg.com',
   'https://identity.netlify.com'
 ]
 
 if (isDevelopment) {
-  scriptSrc.push("'unsafe-inline'", "'unsafe-eval'", 'blob:')
+  scriptSrc.push("'unsafe-eval'", 'blob:')
 }
 
 const connectSrc = [
   "'self'",
-  'https://www.google-analytics.com',
-  'https://region1.google-analytics.com',
   'https://*.algolia.net',
   'https://*.algolianet.com'
 ]

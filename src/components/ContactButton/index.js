@@ -2,17 +2,10 @@ import Link from 'next/link'
 import * as S from './styled'
 import Image from 'next/image'
 import { useState } from 'react'
-import { event } from 'lib/gtag'
-
 const ContactButton = () => {
   const [isHovered, setIsHovered] = useState(false)
 
   const handleClick = () => {
-    event({
-      action: 'click_whatsapp',
-      category: 'Whatsapp',
-      label: `Whatsapp`
-    })
     const whatsappUrl = `https://wa.me/5521976134090?text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.`
     window.open(whatsappUrl, '_blank')
   }

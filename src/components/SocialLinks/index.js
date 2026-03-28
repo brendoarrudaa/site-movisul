@@ -1,4 +1,3 @@
-import { event } from 'lib/gtag'
 import links from './content'
 import Icons from './Icons'
 
@@ -15,13 +14,6 @@ const SocialLinks = () => (
             <a
               href={link.url}
               title={link.label}
-              onClick={() => {
-                event({
-                  action: 'click_footer',
-                  category: 'Footer',
-                  label: link.label
-                })
-              }}
               target="_blank"
               rel="noopener noreferrer"
             >
