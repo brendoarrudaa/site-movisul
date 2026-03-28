@@ -92,6 +92,7 @@ module.exports = {
   async rewrites() {
     return [
       { source: '/admin', destination: '/admin/index.html' },
+      { source: '/config.yml', destination: '/admin/config.yml' },
       { source: '/js/', destination: 'https://movisul.com/' },
       { source: '/jekyll/', destination: 'https://movisul.com/' },
       { source: '/svg/', destination: 'https://movisul.com/' },
