@@ -53,37 +53,36 @@ export const PostTag = styled.div`
   min-width: 40px;
   text-transform: uppercase;
 
-  &.is-aplicativos {
-    background: #02d7ff;
-    color: #000;
+  &.is-sst {
+    background: #0f4c81;
   }
 
-  &.is-web {
-    background: #8257e6;
+  &.is-gestao-riscos {
+    background: #1a6fa8;
   }
 
-  &.is-software {
-    background: #d6ba32;
+  &.is-laudos {
+    background: #2e7d32;
   }
 
-  &.is-qa {
-    background: #7d669e;
+  &.is-esocial {
+    background: #6a1b9a;
   }
 
-  &.is-outsourcing {
-    background: #eb7728;
+  &.is-seguranca {
+    background: #e67e22;
   }
 
-  &.is-devops {
-    background: #b31917;
+  &.is-treinamentos {
+    background: #8e44ad;
   }
 
-  &.is-design {
-    background: #637a91;
+  &.is-saude-ocupacional {
+    background: #c0392b;
   }
 
-  &.is-ux {
-    background: #7aab13;
+  &.is-prevencao {
+    background: #d35400;
   }
 `
 
