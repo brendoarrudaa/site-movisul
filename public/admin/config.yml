@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+locale: pt
+
+media_folder: public/assets/img
+public_folder: /assets/img
+slug:
+  encoding: 'ascii'
+  clean_accents: true
+
+collections:
+  - name: posts
+    label: Posts
+    folder: posts
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - {
+          label: 'Date',
+          name: 'date',
+          widget: 'datetime',
+          format: 'YYYY-MM-DD HH:mm:ss'
+        }
+      - { label: 'Post Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - {
+          label: 'Main Class',
+          name: 'main-class',
+          widget: 'select',
+          options:
+            [
+              'ia',
+              'aplicativos',
+              'web',
+              'software',
+              'outsourcing',
+              'qa',
+              'design',
+              'ux',
+              'devops'
+            ]
+        }
+      - {
+          label: 'Color',
+          name: 'color',
+          widget: 'select',
+          options:
+            [
+              { label: 'IA', value: '#02b7ff' },
+              { label: 'Aplicativos', value: '#02d7ff' },
+              { label: 'WEB', value: '#8257e6' },
+              { label: 'Software', value: '#D6BA32' },
+              { label: 'Outsourcing', value: '#EB7728' },
+              { label: 'QA', value: '#7D669E' },
+              { label: 'Design', value: '#637a91' },
+              { label: 'UX', value: '#7AAB13' },
+              { label: 'Devops', value: '#B31917' }
+            ]
+        }
+      - { label: 'Tags', name: 'tags', widget: 'list', default: [''] }
+      - {
+          label: 'Category',
+          name: 'categories',
+          widget: 'select',
+          options:
+            [
+              'IA',
+              'Aplicativos',
+              'WEB',
+              'Software',
+              'Outsourcing',
+              'QA',
+              'Design',
+              'UX',
+              'Devops'
+            ]
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
