@@ -1,9 +1,11 @@
 ---
 layout: post
 date: 2026-03-17 09:00:00
-image: /assets/img/acidente-de-trabalho-resposta-e-prevencao.webp
-title: "Acidente de trabalho: como responder corretamente e evitar repetir o mesmo erro"
-description: Saiba como agir após um acidente de trabalho e transformar o ocorrido em prevenção efetiva.
+image: ""
+title: "Acidente de trabalho: como responder corretamente e evitar repetir o
+  mesmo erro"
+description: Saiba como agir após um acidente de trabalho e transformar o
+  ocorrido em prevenção efetiva.
 main-class: seguranca
 color: "#e67e22"
 tags:
