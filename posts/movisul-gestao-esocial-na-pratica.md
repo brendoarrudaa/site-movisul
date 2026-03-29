@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-16 09:00:00
+date: 2026-02-28 09:00:00
 image: /assets/img-blog/esocial-sst-sem-erros.png
 title: "Gestão do eSocial SST: como a Movisul reduz erros e organiza sua operação"
 description: Entenda como a Movisul estrutura o eSocial SST com envio correto e integração com a gestão de riscos.

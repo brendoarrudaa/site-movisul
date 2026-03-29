@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-27 09:00:00
+date: 2026-03-04 09:00:00
 image: /assets/img-blog/tecnologia-sst-digital.png
 title: "SST digital: como a tecnologia está transformando a segurança do trabalho"
 description: Veja como a digitalização está mudando a forma de fazer SST nas empresas.

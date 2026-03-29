@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-17 09:00:00
+date: 2026-03-01 09:00:00
 image: /assets/img-blog/laudo-de-insalubridade-e-periculosidade.png
 title: "Perícia trabalhista em SST: como a Movisul apoia empresas com análise técnica e segurança jurídica"
 description: Veja como a perícia trabalhista da Movisul ajuda empresas a se posicionarem com segurança em processos.

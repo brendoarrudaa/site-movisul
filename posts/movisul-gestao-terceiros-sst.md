@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-18 09:00:00
+date: 2026-03-02 09:00:00
 image: /assets/img-blog/gestao-de-riscos-com-melhoria-continua.png
 title: "Gestão de terceiros em SST: como a Movisul organiza documentos, acessos e conformidade"
 description: Entenda como a Movisul estrutura a gestão de terceiros com controle, rastreabilidade e segurança.
