@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-03-24 09:00:00
-image: /assets/img/movisul-missao-no-campo.webp
+image: /assets/img-blog/movisul-missao-no-campo.png
 title: "A missão da Movisul: segurança construída no campo, não apenas nos relatórios"
 description: Entenda como a missão da Movisul transforma a SST em ação prática, melhoria contínua e resultado operacional.
 main-class: prevencao

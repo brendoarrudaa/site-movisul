@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-03-13 09:00:00
-image: /assets/img/laudo-de-insalubridade-e-periculosidade.webp
+image: /assets/img-blog/laudo-de-insalubridade-e-periculosidade.png
 title: "Laudo de insalubridade e periculosidade: quando a empresa precisa e por que isso exige critério técnico"
 description: Entenda a importância dos laudos técnicos para avaliar exposição e dar mais segurança à empresa.
 main-class: laudos

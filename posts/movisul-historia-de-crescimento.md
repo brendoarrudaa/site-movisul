@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-03-23 09:00:00
-image: /assets/img/movisul-historia-de-crescimento.webp
+image: /assets/img-blog/movisul-historia-de-crescimento.png
 title: "Movisul: uma história de crescimento sustentável em Saúde e Segurança do Trabalho"
 description: Conheça a trajetória da Movisul e como sua atuação em SST cresceu com foco em resultado, campo e melhoria contínua.
 main-class: sst

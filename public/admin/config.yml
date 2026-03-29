@@ -7,8 +7,8 @@ backend:
   base_url: https://site-movisul.vercel.app
   auth_endpoint: /api/auth
 
-media_folder: public/assets/img
-public_folder: /assets/img
+media_folder: public/assets/img-blog
+public_folder: /assets/img-blog
 
 locale: pt
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-03-19 09:00:00
-image: /assets/img/gestao-de-riscos-com-melhoria-continua.webp
+image: /assets/img-blog/gestao-de-riscos-com-melhoria-continua.png
 title: "Gestão de riscos com melhoria contínua: como sair do documento e entrar na rotina"
 description: Descubra como manter a gestão de riscos atualizada e integrada à operação da empresa.
 main-class: gestao-riscos

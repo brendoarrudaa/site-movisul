@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-03-17 09:00:00
-image: ""
+image: /assets/img-blog/acidente-de-trabalho-resposta-e-prevencao.png
 title: "Acidente de trabalho: como responder corretamente e evitar repetir o
   mesmo erro"
 description: Saiba como agir após um acidente de trabalho e transformar o

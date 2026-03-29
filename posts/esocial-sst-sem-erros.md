@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-03-14 09:00:00
-image: /assets/img/esocial-sst-sem-erros.webp
+image: /assets/img-blog/esocial-sst-sem-erros.png
 title: "eSocial SST sem erros: como organizar eventos e evitar retrabalho"
 description: Entenda como estruturar o envio de SST no eSocial com mais consistência e menos retrabalho.
 main-class: esocial

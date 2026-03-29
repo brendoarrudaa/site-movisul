@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-03-28 09:00:00
-image: /assets/img/movisul-compliance-gestao-e-credibilidade.webp
+image: /assets/img-blog/movisul-compliance-gestao-e-credibilidade.png
 title: "Compliance, gestão e credibilidade: por que a Movisul vai além da entrega técnica em SST"
 description: Entenda como compliance, governança e gestão de processos reforçam a credibilidade da Movisul.
 main-class: seguranca

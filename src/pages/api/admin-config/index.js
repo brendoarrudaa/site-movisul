@@ -6,8 +6,8 @@ const SITE_URL =
 const SHARED_CONFIG = `
 locale: pt
 
-media_folder: public/assets/img
-public_folder: /assets/img
+media_folder: public/assets/img-blog
+public_folder: /assets/img-blog
 
 slug:
   encoding: ascii
