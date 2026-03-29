@@ -76,15 +76,15 @@ const GlobalStyles = createGlobalStyle`
     --postColor: #e2e8f0;
     --texts: #a0aec0;
     --highlight: #63b3ed;
-    --mediumBackground: #1a202c;
+    --mediumBackground: #072741;
     --background: #111827;
     --white: #fff;
     --black: #1a202c;
-    background: #111827;
+    background: #072741;
   }
 
   body.dark::-webkit-scrollbar-track {
-    background: #111827;
+    background: #072741;
   }
 `
 export default GlobalStyles

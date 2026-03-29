@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const AdBlog = ({ name, url }) => {
   return (
-    <Link href="/contato">
+    <Link href="/#contato">
       <S.AdBlogWrapper>
         <Image
           src={url}

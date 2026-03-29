@@ -3,12 +3,10 @@ import Drawer from 'components/Drawer'
 import Header from 'components/Header'
 import ContactButton from 'components/ContactButton'
 import * as S from './styled'
-import { useRouter } from 'next/router'
 import Footer from 'components/FooterMoviSul'
 
 const Layout = ({ children }) => {
   const [isOpen, setOpen] = useState(false)
-  const { pathname } = useRouter()
 
   useEffect(() => {
     animateContactBtn()
@@ -37,7 +35,7 @@ const Layout = ({ children }) => {
       <S.LayoutMain>
         {children}
         <Drawer isOpen={isOpen} setOpen={setOpen} />
-        {pathname !== '/contato' && <ContactButton />}
+        <ContactButton />
       </S.LayoutMain>
     </S.LayoutWrapper>
   )

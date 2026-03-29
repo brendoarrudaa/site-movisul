@@ -13,7 +13,7 @@ const Sidebar = () => {
         <SocialLinks />
         {width > 1169 && (
           <AdBlog
-            url="/assets/img/servicos-video.gif"
+            url="/assets/img/movisul-blog-gif.gif"
             name="serviços de outsourcing e outros"
           />
         )}

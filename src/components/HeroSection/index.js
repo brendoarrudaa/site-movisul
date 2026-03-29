@@ -34,13 +34,14 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-white/75 max-w-2xl mb-10 leading-relaxed">
-            Soluções completas para empresas que valorizam segurança, performance e
-            conformidade. Atuação em todo o Brasil com mais de 16 anos de experiência.
+            Soluções completas para empresas que valorizam segurança,
+            performance e conformidade. Atuação em todo o Brasil com mais de 16
+            anos de experiência.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/contato"
+              href="/#contato"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#2a9d6e] hover:bg-[#238a5e] text-white font-semibold px-8 py-4 text-base shadow-lg shadow-[#2a9d6e]/30 transition-colors duration-200"
             >
               Receber diagnóstico gratuito em 24h
@@ -58,7 +59,10 @@ const HeroSection = () => {
 
       {/* Scroll hint */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <a href="/#about" className="flex flex-col items-center gap-2 text-white/40 hover:text-white/60 transition-colors">
+        <a
+          href="/#about"
+          className="flex flex-col items-center gap-2 text-white/40 hover:text-white/60 transition-colors"
+        >
           <span className="text-xs tracking-wider">SCROLL</span>
           <div className="w-5 h-8 rounded-full border-2 border-white/30 flex items-start justify-center p-1">
             <div className="w-1 h-2 rounded-full bg-white/60 animate-bounce" />

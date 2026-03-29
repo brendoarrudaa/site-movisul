@@ -12,9 +12,7 @@ const Drawer = ({ isOpen, setOpen }) => {
     <S.DrawerContainer $isOpen={isOpen}>
       <ul className="menu bg-base-100 w-56 ">
         <li>
-          <Link href="/">
-            Inicio
-          </Link>
+          <Link href="/">Inicio</Link>
         </li>
         <div className="dropdown">
           <label tabIndex={0}>
@@ -35,44 +33,38 @@ const Drawer = ({ isOpen, setOpen }) => {
           >
             <li>
               <Link href="/servicos/outsourcing">
-
-                <PeopleTeamAdd size={24} color="#8257e6" />Outsourcing
-                                
+                <PeopleTeamAdd size={24} color="#8257e6" />
+                Outsourcing
               </Link>
             </li>
             <li>
               <Link href="/servicos/inteligencia-artificial">
-
-                <Robot size={24} color="#8257e6" />Inteligência Artificial
-                                
+                <Robot size={24} color="#8257e6" />
+                Inteligência Artificial
               </Link>
             </li>
             <li>
               <Link href="/servicos/desenvolvimento-de-aplicativos">
-
-                <AppSettingsAlt size={24} color="#8257e6" />Aplicativos Mobile
-                                
+                <AppSettingsAlt size={24} color="#8257e6" />
+                Aplicativos Mobile
               </Link>
             </li>
             <li>
               <Link href="/servicos/desenvolvimento-web">
-
-                <Devices size={24} color="#8257e6" />Desenvolvimento Web
-                                
+                <Devices size={24} color="#8257e6" />
+                Desenvolvimento Web
               </Link>
             </li>
             <li>
               <Link href="/servicos/ux-ui-design">
-
-                <DesignIdeas size={24} color="#8257e6" />Product Design
-                                
+                <DesignIdeas size={24} color="#8257e6" />
+                Product Design
               </Link>
             </li>
             <li>
               <Link href="/servicos/quality-assurance">
-
-                <TestTube size={24} color="#8257e6" />Quality Assurance
-                                
+                <TestTube size={24} color="#8257e6" />
+                Quality Assurance
               </Link>
             </li>
           </ul>
@@ -84,9 +76,7 @@ const Drawer = ({ isOpen, setOpen }) => {
             setOpen(false)
           }}
         >
-          <Link href="/#clients">
-            Cases
-          </Link>
+          <Link href="/#clients">Cases</Link>
         </li>
         <li
           className="bordered"
@@ -95,23 +85,17 @@ const Drawer = ({ isOpen, setOpen }) => {
             setOpen(false)
           }}
         >
-          <Link href="/#about">
-            Sobre
-          </Link>
+          <Link href="/#about">Sobre</Link>
         </li>
         <li>
-          <Link href="/blog">
-            Blog
-          </Link>
+          <Link href="/blog">Blog</Link>
         </li>
         <li>
-          <Link href="/contato">
-            Fale com a gente
-          </Link>
+          <Link href="/#contato">Fale com a gente</Link>
         </li>
       </ul>
     </S.DrawerContainer>
-  );
+  )
 }
 
 export default Drawer

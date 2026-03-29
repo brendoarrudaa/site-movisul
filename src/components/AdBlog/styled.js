@@ -2,14 +2,23 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const AdBlogWrapper = styled.div`
-  margin-top: 50px;
-  height: 270px;
+  --ad-accent: #0f4c81;
+  margin-top: 10px;
+  height: 400px;
   width: 270px;
   border-radius: 9px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  border: 3px solid #8257e6;
+  border: 3px solid var(--ad-accent);
+
+  body.light & {
+    --ad-accent: #0f4c81;
+  }
+
+  body.dark & {
+    --ad-accent: #072741;
+  }
 
   &::before {
     content: 'Anúncio';
@@ -18,7 +27,7 @@ export const AdBlogWrapper = styled.div`
     top: 0;
     left: 0;
     color: #fff;
-    background: #8257e6;
+    background: var(--ad-accent);
     border-radius: 0 0 9px 0;
     padding: 4px 8px;
     font-size: 12px;
