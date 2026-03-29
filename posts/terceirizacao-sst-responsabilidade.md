@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-23 09:00:00
+date: 2026-03-08 09:00:00
 image: /assets/img-blog/fiscalizacao-sst-empresa.png
 title: "Terceirização e SST: quem é responsável pela segurança do trabalhador?"
 description: Entenda como funciona a responsabilidade na terceirização em SST.

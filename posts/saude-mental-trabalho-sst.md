@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-20 09:00:00
+date: 2026-03-11 09:00:00
 image: /assets/img-blog/saude-mental-trabalho-sst.png
 title: "Saúde mental no trabalho: o novo risco obrigatório na gestão de SST"
 description: Entenda como a saúde mental entrou de vez na SST e o que sua empresa precisa fazer agora.

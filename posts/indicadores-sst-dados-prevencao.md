@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-26 09:00:00
+date: 2026-03-05 09:00:00
 image: /assets/img-blog/sst-dados-indicadores.png
 title: "Indicadores de SST: como usar dados para prevenir acidentes"
 description: Descubra como usar dados de SST para tomar decisões mais seguras.

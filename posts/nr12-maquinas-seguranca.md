@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-22 09:00:00
+date: 2026-03-09 09:00:00
 image: /assets/img-blog/nr12-maquinas-seguranca.png
 title: "NR-12 na prática: o que sua empresa precisa adequar em máquinas e equipamentos"
 description: Entenda como aplicar a NR-12 e evitar riscos e multas com máquinas.

@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-24 09:00:00
+date: 2026-03-07 09:00:00
 image: /assets/img-blog/esocial-erros-multas.png
 title: "Erros no eSocial SST que podem gerar multa para sua empresa"
 description: Descubra os erros mais comuns no eSocial SST e como evitar penalidades.

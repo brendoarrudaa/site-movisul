@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-25 09:00:00
+date: 2026-03-06 09:00:00
 image: /assets/img-blog/ergonomia-nr17-produtividade.png
 title: "NR-17 e ergonomia: como melhorar produtividade e reduzir afastamentos"
 description: Veja como a ergonomia impacta diretamente produtividade e saúde.

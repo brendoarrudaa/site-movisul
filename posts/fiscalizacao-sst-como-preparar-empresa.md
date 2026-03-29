@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-04-21 09:00:00
+date: 2026-03-10 09:00:00
 image: /assets/img-blog/fiscalizacao-sst-empresa.png
 title: "Fiscalização do trabalho: como preparar sua empresa para não ser multada"
 description: Veja o que o fiscal realmente analisa e como evitar multas em SST.
