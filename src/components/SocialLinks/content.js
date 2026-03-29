@@ -1,7 +1,7 @@
 const links = [
   {
     label: 'Instagram',
-    url: 'https://www.instagram.com/movisul.com/'
+    url: 'https://www.instagram.com/mmovisul'
   },
   {
     label: 'Facebook',

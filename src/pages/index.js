@@ -22,7 +22,7 @@ const organizationSchema = {
     'Gestao Inteligente em Saude e Seguranca do Trabalho. Solucoes completas para empresas que valorizam seguranca, performance e conformidade.',
   sameAs: [
     'https://www.linkedin.com/company/movisul',
-    'https://www.instagram.com/movisul'
+    'https://www.instagram.com/mmovisul'
   ],
   contactPoint: {
     '@type': 'ContactPoint',
@@ -53,7 +53,8 @@ const Home = () => {
     <Layout>
       <Head>
         {generateNextSeo({
-          title: 'MoviSul | Gestao Inteligente em Saude e Seguranca do Trabalho',
+          title:
+            'MoviSul | Gestao Inteligente em Saude e Seguranca do Trabalho',
           description:
             'Solucoes completas em SST para empresas que valorizam seguranca, performance e conformidade. +120 projetos executados, +16 anos de experiencia.',
           canonical: 'https://movisul.com',
@@ -70,7 +71,9 @@ const Home = () => {
         })}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema)
+          }}
         />
       </Head>
       <HeroSection />
