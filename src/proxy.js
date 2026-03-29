@@ -15,7 +15,7 @@ const ADMIN_CSP = [
   "object-src 'none'"
 ].join('; ')
 
-export function middleware(request) {
+export function proxy(request) {
   const { pathname } = request.nextUrl
 
   if (pathname === '/admin' || pathname.startsWith('/admin/')) {
