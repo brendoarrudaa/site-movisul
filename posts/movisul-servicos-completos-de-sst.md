@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-03-26 09:00:00
-image: /assets/img/movisul-servicos-completos-de-sst.webp
+image: /assets/img-blog/movisul-servicos-completos-de-sst.png
 title: "Soluções completas em SST: como a Movisul apoia empresas com serviços técnicos integrados"
 description: Conheça os principais serviços da Movisul e veja como a empresa atua de forma completa em SST.
 main-class: gestao-riscos

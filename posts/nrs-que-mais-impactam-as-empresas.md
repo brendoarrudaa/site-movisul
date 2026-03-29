@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-03-15 09:00:00
-image: /assets/img/nrs-que-mais-impactam-as-empresas.webp
+image: /assets/img-blog/nrs-que-mais-impactam-as-empresas.png
 title: "NRs que mais impactam as empresas: o que o gestor precisa acompanhar de perto"
 description: Conheça as NRs mais presentes na rotina das empresas e como elas influenciam a gestão de SST.
 main-class: sst

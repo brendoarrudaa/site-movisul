@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-03-25 09:00:00
-image: /assets/img/movisul-time-tecnico-multidisciplinar.webp
+image: /assets/img-blog/movisul-time-tecnico-multidisciplinar.png
 title: "O diferencial da Movisul está nas pessoas: a força de um time técnico multidisciplinar"
 description: Veja como a equipe multidisciplinar da Movisul fortalece a entrega de soluções completas em SST.
 main-class: saude-ocupacional

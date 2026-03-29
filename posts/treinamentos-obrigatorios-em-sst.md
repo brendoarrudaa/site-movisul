@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-03-16 09:00:00
-image: /assets/img/treinamentos-obrigatorios-em-sst.webp
+image: /assets/img-blog/treinamentos-obrigatorios-em-sst.png
 title: "Treinamentos obrigatórios em SST: como organizar a empresa sem cair no modelo apenas formal"
 description: Veja como estruturar treinamentos obrigatórios com mais aderência, registro e resultado prático.
 main-class: treinamentos

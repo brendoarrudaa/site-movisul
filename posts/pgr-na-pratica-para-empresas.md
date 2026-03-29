@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-03-28 09:00:00
-image: /assets/img/pgr-na-pratica-para-empresas.webp
+image: /assets/img-blog/pgr-na-pratica-para-empresas.png
 title: "PGR na prática: como transformar a gestão de riscos em resultado para a empresa"
 description: Entenda como o PGR organiza a prevenção, reduz falhas e fortalece a gestão de SST nas empresas.
 main-class: gestao-riscos

@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2026-03-27 09:00:00
-image: /assets/img/movisul-treinamentos-que-fortalecem-a-cultura.webp
+image: /assets/img-blog/movisul-treinamentos-que-fortalecem-a-cultura.png
 title: "Treinamento que gera resultado: como a Movisul fortalece a cultura de segurança nas empresas"
 description: Saiba como os treinamentos da Movisul ajudam empresas a desenvolver equipes mais preparadas e seguras.
 main-class: treinamentos
