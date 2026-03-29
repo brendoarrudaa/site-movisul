@@ -1,7 +1,8 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { Shield, Menu, X, Sun, Moon } from 'lucide-react'
+import { Menu, X, Sun, Moon } from 'lucide-react'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -38,20 +39,27 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm'
-          : 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-gray-100/50 dark:border-gray-800/50'
+          ? 'bg-[#fcfcfc] dark:bg-[#072741] backdrop-blur-lg border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm'
+          : 'bg-[#fcfcfc] dark:bg-[#072741] backdrop-blur-lg border-b border-gray-100/50 dark:border-gray-800/50'
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <Shield
-            className="w-7 h-7 text-[#0f4c81] dark:text-[#63b3ed]"
-            strokeWidth={1.5}
+        <Link href="/" className="flex items-center">
+          <Image
+            src={
+              isDark
+                ? '/assets/img/logo-dark.png'
+                : '/assets/img/logo-light.png'
+            }
+            alt="Movisul"
+            width={85}
+            height={40}
+            sizes="85px"
+            priority
+            className="block object-contain"
+            style={{ width: '85px', height: '40px' }}
           />
-          <span className="text-xl font-bold text-[#0f4c81] dark:text-[#63b3ed]">
-            Movi<span className="text-[#2a9d6e]">Sul</span>
-          </span>
         </Link>
 
         {/* Desktop */}
@@ -102,7 +110,9 @@ export function Navbar() {
             className="text-[#1a202c] dark:text-gray-200 p-1 transition-transform duration-300"
             aria-label="Menu"
           >
-            <span className={`block transition-all duration-300 ${open ? 'rotate-90 opacity-80' : 'rotate-0 opacity-100'}`}>
+            <span
+              className={`block transition-all duration-300 ${open ? 'rotate-90 opacity-80' : 'rotate-0 opacity-100'}`}
+            >
               {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </span>
           </button>
