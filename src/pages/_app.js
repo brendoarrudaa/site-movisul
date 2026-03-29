@@ -31,8 +31,8 @@ function App({ Component, pageProps }) {
     <>
       <Head>
         <title>MoviSul | Saude e Seguranca do Trabalho</title>
-        <link rel="shortcut icon" href="/assets/img/movisul-favicon.png" />
-        <link rel="apple-touch-icon" href="/assets/img/movisul-favicon.png" />
+        <link rel="shortcut icon" href="/assets/img/logo-tab.png" />
+        <link rel="apple-touch-icon" href="/assets/img/logo-tab.png" />
         <meta name="theme-color" content="#0f4c81" />
         <meta
           name="google-site-verification"
