@@ -3,13 +3,15 @@ import { Quote } from 'lucide-react'
 
 const testimonials = [
   {
-    name: 'Diego Maciel',
-    role: 'Gerente de Segurança — Norsk Hydro',
+    company: 'Norsk Hydro',
     text: 'MoviSul é uma empresa experiente e eficiente, especialista em segurança e saúde ocupacional. Demonstrou domínio de ferramentas de gestão, implementou controles e soluções eficazes que minimizaram riscos e melhoraram práticas de segurança.'
   },
   {
-    name: 'Cicero Viana',
-    role: 'Gestor de HSSE & Sustentabilidade',
+    company: 'EMFLORA Empreendimentos Florestais',
+    text: 'Movisul é uma empresa extremamente dedicada e comprometida com a segurança e a qualidade no trabalho industrial. A empresa tem uma excelente capacidade de identificar e resolver problemas com agilidade e eficiência. Destacam-se por seus métodos eficazes de prevenção de acidentes e gestão de segurança no ambiente de trabalho, além de seu vasto conhecimento nas áreas de Segurança e Meio Ambiente Ocupacional.'
+  },
+  {
+    company: 'Hydro Mineração',
     text: 'MoviSul é uma empresa comprometida e com excelente capacidade de comunicação. Muito eficaz na gestão de Saúde e Segurança do Trabalho. Empresa pontual, prestativa e proativa.'
   }
 ]
@@ -32,18 +34,19 @@ const TestimonialsSection = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-14 sm:py-20 lg:py-28 bg-[#f7fafc] dark:bg-gray-900">
+    <section ref={sectionRef} className="py-14 bg-[#f7fafc] dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="fade-up opacity-0 translate-y-6 transition-all duration-700 ease-out inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2a9d6e]/10 text-sm font-semibold text-[#2a9d6e] uppercase tracking-widest mb-4">
             Depoimentos
           </span>
           <h2 className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-100 ease-out text-3xl sm:text-4xl font-bold text-[#1a202c] dark:text-gray-100">
-            O que nossos clientes <span className="text-[#0f4c81] dark:text-[#63b3ed]">dizem</span>
+            O que nossos clientes{' '}
+            <span className="text-[#0f4c81] dark:text-[#63b3ed]">dizem</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((t, i) => (
             <div
               key={i}
@@ -61,12 +64,13 @@ const TestimonialsSection = () => {
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-linear-to-br from-[#0f4c81] to-[#2a9d6e] flex items-center justify-center shrink-0">
                   <span className="text-white text-sm font-bold">
-                    {t.name.charAt(0)}
+                    {t.company.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <p className="font-bold text-[#1a202c] dark:text-gray-100 text-sm">{t.name}</p>
-                  <p className="text-xs text-[#718096] dark:text-gray-400">{t.role}</p>
+                  <p className="font-bold text-[#1a202c] dark:text-gray-100 text-sm">
+                    {t.company}
+                  </p>
                 </div>
               </div>
             </div>

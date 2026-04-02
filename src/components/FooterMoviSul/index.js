@@ -78,7 +78,7 @@ const FooterMoviSul = () => {
             </h4>
             <div className="space-y-3 text-sm text-gray-600 dark:text-gray-300">
               <a
-                href="https://maps.app.goo.gl/XtXEKcKs2MEipFqZ8"
+                href="https://maps.app.goo.gl/UFeNYiPpE8adVuYc8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"

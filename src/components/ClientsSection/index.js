@@ -1,16 +1,21 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 
 const clients = [
-  'Vale Florestar',
-  'Suzano',
-  'Hydro Mineração',
-  'Guerdal',
-  'Bracell',
-  'ADM do Brasil'
+{ name: 'Suzano', logo: '/assets/img/Suzano.png' },
+  { name: 'Hydro Mineração', logo: '/assets/img/HydroMineracao.png' },
+  { name: 'Guerdal', logo: '/assets/img/Guerdal.png' },
+  { name: 'Bracell', logo: '/assets/img/Bracell.png' },
+  { name: 'ADM do Brasil', logo: '/assets/img/ADMdoBrasil.png' },
+  { name: 'Bom Jesus', logo: '/assets/img/BomJesus.png' }
 ]
 
 const ClientsSection = () => {
   const sectionRef = useRef(null)
+  const trackRef = useRef(null)
+  const [isPaused, setIsPaused] = useState(false)
+  const positionRef = useRef(0)
+  const rafRef = useRef(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,8 +31,36 @@ const ClientsSection = () => {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    const track = trackRef.current
+    if (!track) return
+
+    const speed = 0.4
+
+    const animate = () => {
+      if (!isPaused) {
+        positionRef.current -= speed
+        const halfWidth = track.scrollWidth / 2
+        if (Math.abs(positionRef.current) >= halfWidth) {
+          positionRef.current = 0
+        }
+        track.style.transform = `translateX(${positionRef.current}px)`
+      }
+      rafRef.current = requestAnimationFrame(animate)
+    }
+
+    rafRef.current = requestAnimationFrame(animate)
+    return () => cancelAnimationFrame(rafRef.current)
+  }, [isPaused])
+
+  const doubled = [...clients, ...clients]
+
   return (
-    <section id="clients" ref={sectionRef} className="py-14 sm:py-20 lg:py-28 bg-[#f7fafc] dark:bg-gray-900">
+    <section
+      id="clients"
+      ref={sectionRef}
+      className="py-14 sm:py-20 bg-[#f7fafc] dark:bg-gray-900"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span className="fade-up opacity-0 translate-y-6 transition-all duration-700 ease-out inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2a9d6e]/10 text-sm font-semibold text-[#2a9d6e] uppercase tracking-widest mb-4">
           Clientes
@@ -39,20 +72,38 @@ const ClientsSection = () => {
           </span>
         </h2>
         <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-200 ease-out text-lg text-[#4a5568] dark:text-gray-400 max-w-2xl mx-auto mb-12">
-          Atendemos grandes empresas dos setores de mineração, construção, logística,
-          agroindústria e área florestal.
+          Atendemos grandes empresas dos setores de mineração, construção,
+          logística, agroindústria e área florestal.
         </p>
+      </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {clients.map((client, i) => (
+      <div className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-300 ease-out overflow-hidden">
+        <div
+          ref={trackRef}
+          className="flex gap-6 w-max"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {doubled.map((client, i) => (
             <div
               key={i}
-              className="fade-up opacity-0 translate-y-6 transition-all duration-700 ease-out group flex items-center justify-center py-8 px-4 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-[#0f4c81]/20"
-              style={{ transitionDelay: `${(i + 3) * 80}ms` }}
+              className="flex items-center justify-center bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-[#0f4c81]/20 transition-all duration-300"
+              style={{
+                width: '180px',
+                height: '100px',
+                flexShrink: 0,
+                padding: '16px 20px'
+              }}
             >
-              <span className="font-bold text-[#718096] dark:text-gray-400 group-hover:text-[#0f4c81] dark:group-hover:text-[#63b3ed] text-sm tracking-wide transition-colors duration-200">
-                {client}
-              </span>
+              <div className="relative w-full h-full">
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  fill
+                  sizes="180px"
+                  className="object-contain"
+                />
+              </div>
             </div>
           ))}
         </div>
