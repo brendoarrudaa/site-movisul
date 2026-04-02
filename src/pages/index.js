@@ -12,6 +12,7 @@ import MissionSection from 'components/MissionSection'
 import CTASection from 'components/CTASection'
 import FooterMoviSul from 'components/FooterMoviSul'
 import BlogPreviewSection from 'components/BlogPreviewSection'
+import { getAllPosts } from 'lib/api'
 
 const organizationSchema = {
   '@context': 'https://schema.org',
@@ -49,7 +50,7 @@ const organizationSchema = {
   ]
 }
 
-const Home = () => {
+const Home = ({ recentPosts }) => {
   return (
     <Layout>
       <Head>
@@ -85,11 +86,23 @@ const Home = () => {
       <ClientsSection />
       <TestimonialsSection />
       <MissionSection />
-      <BlogPreviewSection />
+      <BlogPreviewSection posts={recentPosts} />
       <CTASection />
       <FooterMoviSul />
     </Layout>
   )
+}
+
+export async function getStaticProps() {
+  const posts = getAllPosts()
+  const recentPosts = posts.slice(0, 3).map(post => ({
+    slug: post.slug,
+    image: post.frontmatter.image || null,
+    title: post.frontmatter.title,
+    description: post.frontmatter.description
+  }))
+
+  return { props: { recentPosts } }
 }
 
 export default Home

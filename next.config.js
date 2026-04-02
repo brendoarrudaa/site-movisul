@@ -87,6 +87,14 @@ module.exports = {
       })
     }
 
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false
+      }
+    }
+
     return config
   },
   async rewrites() {
