@@ -42,7 +42,11 @@ const AboutSection = () => {
   }, [])
 
   return (
-    <section id="about" ref={sectionRef} className="py-14 sm:py-20 lg:py-28 bg-[#f7fafc] dark:bg-gray-900">
+    <section
+      id="about"
+      ref={sectionRef}
+      className="py-14 sm:py-20 bg-[#f7fafc] dark:bg-gray-900"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Text */}
@@ -58,15 +62,17 @@ const AboutSection = () => {
               e excelência
             </h2>
             <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-200 ease-out text-[#4a5568] dark:text-gray-400 leading-relaxed mb-6">
-              A MoviSul é especialista em Gestão de Saúde e Segurança do Trabalho,
-              atuando em diversos estados do Brasil com soluções práticas, tecnológicas e
-              eficientes. Nosso diferencial está na atuação direta no campo, identificando
-              riscos reais e promovendo melhorias contínuas nos processos.
+              A MoviSul é especialista em Gestão de Saúde e Segurança do
+              Trabalho, atuando em diversos estados do Brasil com soluções
+              práticas, tecnológicas e eficientes. Nosso diferencial está na
+              atuação direta no campo, identificando riscos reais e promovendo
+              melhorias contínuas nos processos.
             </p>
             <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-300 ease-out text-[#4a5568] dark:text-gray-400 leading-relaxed">
-              Com base em um trabalho de alto nível e uma orientação voltada à melhoria
-              contínua, a MoviSul cresceu significativamente, atendendo grandes players
-              como Vale Florestar, Suzano, Hydro Mineração, Bracell e ADM do Brasil.
+              Com base em um trabalho de alto nível e uma orientação voltada à
+              melhoria contínua, a MoviSul cresceu significativamente, atendendo
+              grandes players como Vale Florestar, Suzano, Hydro Mineração,
+              Bracell e ADM do Brasil.
             </p>
           </div>
 
@@ -81,8 +87,12 @@ const AboutSection = () => {
                 <div className="w-11 h-11 rounded-xl bg-[#0f4c81]/8 dark:bg-[#63b3ed]/10 flex items-center justify-center text-[#0f4c81] dark:text-[#63b3ed] group-hover:bg-[#0f4c81] group-hover:text-white transition-all duration-300">
                   <Icon className="w-6 h-6" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-bold text-[#1a202c] dark:text-gray-100">{title}</h3>
-                <p className="text-sm text-[#718096] dark:text-gray-400 leading-relaxed">{desc}</p>
+                <h3 className="font-bold text-[#1a202c] dark:text-gray-100">
+                  {title}
+                </h3>
+                <p className="text-sm text-[#718096] dark:text-gray-400 leading-relaxed">
+                  {desc}
+                </p>
               </div>
             ))}
           </div>

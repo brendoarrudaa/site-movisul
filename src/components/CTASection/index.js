@@ -22,7 +22,7 @@ const CTASection = () => {
     <section
       id="contato"
       ref={sectionRef}
-      className="py-14 sm:py-20 lg:py-28 bg-linear-to-br from-[#0a2e4f] via-[#0f4c81] to-[#1a3a5c] relative overflow-hidden"
+      className="py-14 sm:py-20 bg-linear-to-br from-[#0a2e4f] via-[#0f4c81] to-[#1a3a5c] relative overflow-hidden"
     >
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#2a9d6e]/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/5 rounded-full blur-[100px]" />
@@ -40,8 +40,8 @@ const CTASection = () => {
           Pronto para elevar o nível de segurança da sua empresa?
         </h2>
         <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-100 ease-out text-lg text-white/70 mb-10 leading-relaxed">
-          Solicite um diagnóstico gratuito e receba uma proposta personalizada em até 24
-          horas. Sem compromisso.
+          Solicite um diagnóstico gratuito e receba uma proposta personalizada
+          em até 24 horas. Sem compromisso.
         </p>
 
         <div className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-200 ease-out flex flex-col sm:flex-row gap-4 justify-center">

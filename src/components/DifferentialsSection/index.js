@@ -30,7 +30,7 @@ const DifferentialsSection = () => {
     <section
       id="diferenciais"
       ref={sectionRef}
-      className="py-14 sm:py-20 lg:py-28 bg-linear-to-br from-[#0a2e4f] via-[#0f4c81] to-[#1a3a5c] relative overflow-hidden"
+      className="py-14 sm:py-20 bg-linear-to-br from-[#0a2e4f] via-[#0f4c81] to-[#1a3a5c] relative overflow-hidden"
     >
       <div
         className="absolute inset-0 opacity-5"
@@ -59,7 +59,9 @@ const DifferentialsSection = () => {
               <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-white/10 border border-white/20">
                 <Icon className="w-6 h-6 text-[#34c785]" strokeWidth={1.5} />
               </div>
-              <span className="text-4xl md:text-5xl font-extrabold text-white">{number}</span>
+              <span className="text-4xl md:text-5xl font-extrabold text-white">
+                {number}
+              </span>
               <span className="text-sm text-white/60">{label}</span>
             </div>
           ))}

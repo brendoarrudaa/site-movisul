@@ -49,7 +49,7 @@ const HowItWorksSection = () => {
     <section
       id="how-it-works"
       ref={sectionRef}
-      className="py-14 sm:py-20 lg:py-28 bg-linear-to-br from-[#0a2e4f] via-[#0f4c81] to-[#1a3a5c] relative overflow-hidden"
+      className="py-14 sm:py-20 bg-linear-to-br from-[#0a2e4f] via-[#0f4c81] to-[#1a3a5c] relative overflow-hidden"
     >
       {/* Grid pattern */}
       <div
@@ -73,7 +73,8 @@ const HowItWorksSection = () => {
             </span>
           </h2>
           <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-200 ease-out text-lg text-white/60 max-w-xl mx-auto">
-            Um processo simples e eficiente para garantir a segurança da sua empresa.
+            Um processo simples e eficiente para garantir a segurança da sua
+            empresa.
           </p>
         </div>
 

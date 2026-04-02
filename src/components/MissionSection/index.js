@@ -19,7 +19,10 @@ const MissionSection = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-14 sm:py-20 lg:py-28 bg-[#f7fafc] dark:bg-gray-900">
+    <section
+      ref={sectionRef}
+      className="py-14 sm:py-20 bg-[#f7fafc] dark:bg-gray-900"
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="fade-up opacity-0 translate-y-6 transition-all duration-700 ease-out">
           <div className="w-16 h-16 mx-auto rounded-2xl bg-linear-to-br from-[#0f4c81] to-[#2a9d6e] flex items-center justify-center mb-6">
@@ -39,9 +42,10 @@ const MissionSection = () => {
         </h2>
 
         <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-300 ease-out text-xl text-[#4a5568] dark:text-gray-400 leading-relaxed">
-          &ldquo;Gerar resultados concretos através da análise prática dos processos,
-          promovendo ambientes mais seguros, produtivos e sustentáveis. Não fazemos
-          gestão distante — vamos ao campo, ao chão de fábrica, às frentes de serviço.&rdquo;
+          &ldquo;Gerar resultados concretos através da análise prática dos
+          processos, promovendo ambientes mais seguros, produtivos e
+          sustentáveis. Não fazemos gestão distante — vamos ao campo, ao chão de
+          fábrica, às frentes de serviço.&rdquo;
         </p>
       </div>
 
