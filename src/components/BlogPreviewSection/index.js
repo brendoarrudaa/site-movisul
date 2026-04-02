@@ -1,9 +1,29 @@
 import { useEffect, useRef } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
-const BlogPreviewSection = ({ posts = [] }) => {
+const posts = [
+  {
+    slug: 'indicadores-sst-dados-prevencao',
+    image: '/assets/img-blog/sst-dados-indicadores.png',
+    title: 'Indicadores de SST: como usar dados para prevenir acidentes',
+    description: 'Descubra como usar dados de SST para tomar decisões mais seguras.'
+  },
+  {
+    slug: 'sst-digital-tecnologia-seguranca',
+    image: '/assets/img-blog/tecnologia-sst-digital.png',
+    title: 'SST digital: como a tecnologia está transformando a segurança do trabalho',
+    description: 'Veja como a digitalização está mudando a forma de fazer SST nas empresas.'
+  },
+  {
+    slug: 'movisul-implantacao-sistemas-iso',
+    image: '/assets/img-blog/movisul-servicos-completos-de-sst.png',
+    title: 'Implantação de sistemas ISO 9001 e 45001: como a Movisul apoia empresas na certificação',
+    description: 'Saiba como a Movisul atua na implantação e manutenção de sistemas de gestão ISO com foco em SST.'
+  }
+]
+
+const BlogPreviewSection = () => {
   const sectionRef = useRef(null)
 
   useEffect(() => {
@@ -38,30 +58,30 @@ const BlogPreviewSection = ({ posts = [] }) => {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="fade-up opacity-0 translate-y-6 transition-all duration-700 ease-out group flex flex-col bg-[#f7fafc] dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg overflow-hidden"
+              className="fade-up opacity-0 translate-y-6 transition-all duration-700 ease-out group"
               style={{ transitionDelay: `${(i + 2) * 150}ms` }}
             >
-              {post.frontmatter.image && (
-                <div className="relative w-full h-48 shrink-0">
-                  <Image
-                    src={post.frontmatter.image}
-                    alt={post.frontmatter.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+              <div className="card bg-base-100 shadow-sm hover:shadow-lg transition-shadow duration-300 h-full">
+                <figure>
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title text-base leading-snug group-hover:text-[#0f4c81] transition-colors">
+                    {post.title}
+                  </h2>
+                  <p className="text-sm text-[#718096] leading-relaxed">
+                    {post.description}
+                  </p>
+                  <div className="card-actions justify-start mt-2">
+                    <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#2a9d6e] group-hover:gap-2 transition-all">
+                      Continue lendo <ArrowRight size={14} />
+                    </span>
+                  </div>
                 </div>
-              )}
-              <div className="flex flex-col flex-1 p-6">
-                <h3 className="font-bold text-[#1a202c] dark:text-gray-100 text-base leading-snug mb-3 group-hover:text-[#0f4c81] dark:group-hover:text-[#63b3ed] transition-colors">
-                  {post.frontmatter.title}
-                </h3>
-                <p className="text-sm text-[#718096] dark:text-gray-400 leading-relaxed flex-1">
-                  {post.frontmatter.description}
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2a9d6e] group-hover:gap-2 transition-all">
-                  Continue lendo <ArrowRight size={14} />
-                </span>
               </div>
             </Link>
           ))}
