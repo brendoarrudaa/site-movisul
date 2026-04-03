@@ -29,7 +29,7 @@ const Post = ({ posts }) => {
           }
         })}
       </Head>
-      {/* <BlogList posts={posts} /> */}
+      <BlogList posts={posts} />
     </BlogLayout>
   )
 }
