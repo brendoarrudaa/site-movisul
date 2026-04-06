@@ -66,7 +66,7 @@ collections:
 
   - name: gallery
     label: Galeria de Fotos
-    folder: gallery
+    folder: public/assets/img-gallery
     create: true
     slug: "{{slug}}"
     media_folder: "/public/assets/img-gallery"
