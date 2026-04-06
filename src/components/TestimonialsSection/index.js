@@ -61,17 +61,10 @@ const TestimonialsSection = () => {
               <p className="text-[#4a5568] dark:text-gray-400 leading-relaxed mb-6 italic">
                 &ldquo;{t.text}&rdquo;
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-linear-to-br from-[#0f4c81] to-[#2a9d6e] flex items-center justify-center shrink-0">
-                  <span className="text-white text-sm font-bold">
-                    {t.company.charAt(0)}
-                  </span>
-                </div>
-                <div>
-                  <p className="font-bold text-[#1a202c] dark:text-gray-100 text-sm">
-                    {t.company}
-                  </p>
-                </div>
+              <div>
+                <p className="font-bold text-[#1a202c] dark:text-gray-100 text-sm">
+                  {t.company}
+                </p>
               </div>
             </div>
           ))}
