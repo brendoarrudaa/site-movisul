@@ -2,7 +2,7 @@ import matter from 'gray-matter'
 import { join } from 'path'
 import fs from 'fs'
 
-const galleryDirectory = join(process.cwd(), 'gallery')
+const galleryDirectory = join(process.cwd(), 'public', 'assets', 'img-gallery')
 
 export function getAllGalleryPhotos() {
   if (!fs.existsSync(galleryDirectory)) return []
