@@ -1,5 +1,5 @@
-'use client'
 import { useState } from 'react'
+import Image from 'next/image'
 
 const categories = [
   'Todos',
@@ -12,14 +12,14 @@ const categories = [
 ]
 
 const placeholders = [
-  { src: '/assets/img/servicos-video.gif', alt: 'Inspeção de segurança em campo', category: 'Segurança do Trabalho' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Avaliação ambiental em área de operação', category: 'Meio Ambiente' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Análise ergonômica do posto de trabalho', category: 'Ergonomia' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Gestão dos eventos SST no eSocial', category: 'SST no eSocial' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Medição de agentes físicos — higiene ocupacional', category: 'Higiene Ocupacional' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Treinamento NR-35 — trabalho em altura', category: 'Cursos e Treinamentos' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Auditoria de conformidade com NRs', category: 'Segurança do Trabalho' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Programa de monitoramento ambiental', category: 'Meio Ambiente' }
+  { src: '/assets/img/servicos-video.gif', alt: 'Inspeção de segurança em campo', caption: '', category: 'Segurança do Trabalho' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Avaliação ambiental em área de operação', caption: '', category: 'Meio Ambiente' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Análise ergonômica do posto de trabalho', caption: '', category: 'Ergonomia' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Gestão dos eventos SST no eSocial', caption: '', category: 'SST no eSocial' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Medição de agentes físicos — higiene ocupacional', caption: '', category: 'Higiene Ocupacional' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Treinamento NR-35 — trabalho em altura', caption: '', category: 'Cursos e Treinamentos' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Auditoria de conformidade com NRs', caption: '', category: 'Segurança do Trabalho' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Programa de monitoramento ambiental', caption: '', category: 'Meio Ambiente' }
 ]
 
 const GaleriaSection = ({ photos = [] }) => {
@@ -79,15 +79,16 @@ const GaleriaSection = ({ photos = [] }) => {
                 key={i}
                 className="group relative aspect-square rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={photo.src}
                   alt={photo.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-[#0a2e4f]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
                   <p className="text-white text-xs font-medium leading-snug">
-                    {photo.alt}
+                    {photo.caption || photo.alt}
                   </p>
                 </div>
                 <span className="absolute top-2 right-2 text-[10px] font-semibold bg-[#0f4c81]/80 text-white px-2 py-0.5 rounded-full">
