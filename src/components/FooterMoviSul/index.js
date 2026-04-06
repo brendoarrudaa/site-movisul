@@ -45,11 +45,11 @@ const socialLinks = [
 
 const menuLinks = [
   { href: '/', label: 'Início' },
-  { href: '/#about', label: 'Sobre' },
-  { href: '/#galeria', label: 'Galeria' },
+  { href: '/sobre', label: 'Sobre' },
+  { href: '/galeria', label: 'Galeria' },
   { href: '/#equipe', label: 'Equipe' },
   { href: '/blog', label: 'Blog' },
-  { href: '/#contato', label: 'Contato' }
+  { href: '/contato', label: 'Contato' }
 ]
 
 const solutions = [

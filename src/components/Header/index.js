@@ -10,7 +10,7 @@ const navLinks = [
   { href: '/galeria', label: 'Galeria' },
   { href: '/#equipe', label: 'Equipe' },
   { href: '/#services', label: 'Serviços' },
-  { href: '/#contato', label: 'Contato' },
+  { href: '/contato', label: 'Contato' },
   { href: '/blog', label: 'Blog' }
 ]
 
@@ -86,7 +86,7 @@ export function Navbar() {
             )}
           </button>
           <Link
-            href="/#contato"
+            href="/contato"
             className="btn p-4 rounded-full bg-[#0f4c81] hover:bg-[#0d3f6b] text-white border-0 px-6 text-sm shadow-md"
           >
             Falar com especialista
@@ -138,7 +138,7 @@ export function Navbar() {
             </Link>
           ))}
           <Link
-            href="/#contato"
+            href="/contato"
             onClick={() => setOpen(false)}
             className="btn btn-sm rounded-full bg-[#0f4c81] text-white border-0 w-full mt-2 text-sm"
           >
