@@ -12,6 +12,8 @@ import MissionSection from 'components/MissionSection'
 import CTASection from 'components/CTASection'
 import FooterMoviSul from 'components/FooterMoviSul'
 import BlogPreviewSection from 'components/BlogPreviewSection'
+import GaleriaSection from 'components/GaleriaSection'
+import EquipeSection from 'components/EquipeSection'
 import { getAllPosts } from 'lib/api'
 
 const organizationSchema = {
@@ -85,6 +87,8 @@ const Home = ({ recentPosts }) => {
       <HowItWorksSection />
       <ClientsSection />
       <TestimonialsSection />
+      <GaleriaSection />
+      <EquipeSection />
       <MissionSection />
       <BlogPreviewSection posts={recentPosts} />
       <CTASection />

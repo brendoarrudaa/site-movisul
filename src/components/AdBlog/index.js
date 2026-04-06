@@ -9,7 +9,7 @@ const AdBlog = ({ name, url }) => {
       <S.AdBlogWrapper>
         <Image
           src={url}
-          alt={`Anuncio de ${name} da Movisul`}
+          alt={`Anuncio de ${name} da MoviSul`}
           width={270}
           height={270}
           loading="eager"

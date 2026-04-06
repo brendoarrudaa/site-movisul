@@ -48,12 +48,12 @@ const BlogPost = ({ post }) => {
     dateModified: post.frontmatter.date,
     author: {
       '@type': 'Organization',
-      name: 'Movisul',
+      name: 'MoviSul',
       url: 'https://movisul.com'
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Movisul',
+      name: 'MoviSul',
       logo: {
         '@type': 'ImageObject',
         url: 'https://movisul.com/assets/img/movisul-icon.png'
@@ -68,13 +68,13 @@ const BlogPost = ({ post }) => {
     <>
       <Head>
         {generateNextSeo({
-          title: `${post.frontmatter.title} | Movisul`,
+          title: `${post.frontmatter.title} | MoviSul`,
           description: post.frontmatter.description,
           canonical: `https://movisul.com/blog/${post.slug}`,
           openGraph: {
             type: 'article',
             url: `https://movisul.com/blog/${post.slug}`,
-            title: `${post.frontmatter.title} - Movisul`,
+            title: `${post.frontmatter.title} - MoviSul`,
             description: post.frontmatter.description,
             article: {
               publishedTime: post.frontmatter.date,

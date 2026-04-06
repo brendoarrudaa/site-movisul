@@ -58,7 +58,7 @@ const Button = styled(Link)`
 
 const NotFoundPage = () => (
   <Container>
-    <Head>{generateNextSeo({ title: 'Não encontrado | Movisul' })}</Head>
+    <Head>{generateNextSeo({ title: 'Não encontrado | MoviSul' })}</Head>
     <Text>Erro</Text>
     <Title>404</Title>
     <Text>Parece que não tem o que você procura.</Text>

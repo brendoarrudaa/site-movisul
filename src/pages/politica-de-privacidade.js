@@ -9,15 +9,15 @@ const PrivacyPolicy = () => {
     <Layout>
       <Head>
         {generateNextSeo({
-          title: 'Política de Privacidade | Movisul',
+          title: 'Política de Privacidade | MoviSul',
           description:
-            'Saiba como a Movisul coleta, usa e protege seus dados pessoais em conformidade com a LGPD (Lei 13.709/2018).',
+            'Saiba como a MoviSul coleta, usa e protege seus dados pessoais em conformidade com a LGPD (Lei 13.709/2018).',
           canonical: 'https://movisul.com/politica-de-privacidade',
           openGraph: {
             url: 'https://movisul.com/politica-de-privacidade',
-            title: 'Política de Privacidade | Movisul',
+            title: 'Política de Privacidade | MoviSul',
             description:
-              'Saiba como a Movisul coleta, usa e protege seus dados pessoais em conformidade com a LGPD.'
+              'Saiba como a MoviSul coleta, usa e protege seus dados pessoais em conformidade com a LGPD.'
           }
         })}
         <meta name="robots" content="noindex, follow" />

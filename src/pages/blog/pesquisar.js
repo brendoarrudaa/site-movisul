@@ -13,7 +13,7 @@ const SearchPage = () => {
     <BlogLayout>
       <Head>
         {generateNextSeo({
-          title: 'Pesquisar no Blog | Movisul',
+          title: 'Pesquisar no Blog | MoviSul',
           description: 'Vai lá, busque por posts novos e bem antigos.'
         })}
       </Head>

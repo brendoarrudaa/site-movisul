@@ -22,12 +22,12 @@ const PoliticaDePrivacidade = () => {
       <div className="privacy">
         <h2>POLÍTICA DE PRIVACIDADE</h2>
         <p>
-          A Movisul é um empresa especializada em Desenvolvimento de Software
+          A MoviSul é um empresa especializada em Desenvolvimento de Software
           em geral, como Aplicativos Mobile, Sistemas Web, Outsourcing, UX
           Design, Quality Assurance e Infraestrutura, tanto para clientes que já
           possuem tais soluções quanto para clientes que desejam implementar
           soluções de forma personalizada para atender a demanda do cliente
-          final. Para a Movisul, a sua privacidade e segurança são prioridades
+          final. Para a MoviSul, a sua privacidade e segurança são prioridades
           e nos comprometemos com a transparência do tratamento de dados
           pessoais dos nossos usuários/clientes. Por isso, nossa Política de
           Privacidade estabelece quais dados são coletados, como é feita a
@@ -52,10 +52,10 @@ const PoliticaDePrivacidade = () => {
           motivos da coleta e a forma como os usuários podem gerenciar ou
           excluir as suas informações pessoais. Esta Política de Privacidade
           aplica-se a todos os usuários e visitantes do site e integra os Termos
-          e Condições Gerais de Uso do site da Movisul, devidamente inscrita no
+          e Condições Gerais de Uso do site da MoviSul, devidamente inscrita no
           CNPJ sob o nº 42.885.072/0001-03, situado em Estrada do Rio Grande,
           868, Bl.04, salas 806, Condomínio Connect Life, Taquara/RJ, doravante
-          nominada Movisul. O presente documento foi elaborado em conformidade
+          nominada MoviSul. O presente documento foi elaborado em conformidade
           com a Lei Geral de Proteção de Dados Pessoais (Lei 13.709/18), o Marco
           Civil da Internet (Lei 12.965/14) (e o Regulamento da UE n.
           2016/6790). Ainda, o documento poderá ser atualizado em decorrência de
@@ -71,12 +71,12 @@ const PoliticaDePrivacidade = () => {
 
         <h2>QUAIS DADOS PESSOAIS RECOLHEMOS SOBRE O USUÁRIO E VISITANTE</h2>
         <p>
-          A Movisul obtém dados pessoais dos seus usuários e visitantes
+          A MoviSul obtém dados pessoais dos seus usuários e visitantes
           conforme definido no Art. 5º da Lei Nº 13.709/2018, registrando
           preferencialmente: e-mail e nome completo. Poderão ser registrados,
           também, dados anonimizados, para otimização de navegação, como: acesso
           a páginas, palavras-chave utilizadas na busca, recomendações,
-          comentários. A Movisul, por meio da plataforma, poderá coletar dados
+          comentários. A MoviSul, por meio da plataforma, poderá coletar dados
           sensíveis dos usuários e visitantes, como: origem étnica ou racial,
           opinião política, convicção religiosa, dados genéticos, dados
           relativos à saúde, orientação sexual.
@@ -128,13 +128,13 @@ const PoliticaDePrivacidade = () => {
         <h2>SEGURANÇA DOS DADOS PESSOAIS ARMAZENADOS</h2>
 
         <p>
-          A Movisul se compromete a aplicar todas as medidas técnicas e
+          A MoviSul se compromete a aplicar todas as medidas técnicas e
           organizacionais aptas a proteger os seus dados pessoais de acessos não
           autorizados e de situações de destruição, perda, alteração,
-          comunicação ou difusão de tais dados. A Movisul tem regras rígidas no
+          comunicação ou difusão de tais dados. A MoviSul tem regras rígidas no
           intuito de proteger seus dados de qualquer uso indevido, através da
           implementação de controles, encriptação para que seus dados fiquem
-          anônimos. A Movisul não se exime de responsabilidade por culpa
+          anônimos. A MoviSul não se exime de responsabilidade por culpa
           exclusiva do usuário, como no caso em que ele mesmo transfere seus
           dados a terceiros. Os dados pessoais armazenados são tratados com
           confidencialidade, dentro dos limites legais. No entanto, podemos
@@ -191,7 +191,7 @@ const PoliticaDePrivacidade = () => {
 
         <p>
           Conforme Art. 18º da Lei 13.709/2018, em qualquer tempo, o usuário ou
-          visitante pode requisitar a Movisul: I - Confirmação da existência de
+          visitante pode requisitar a MoviSul: I - Confirmação da existência de
           tratamento; II - Acesso aos dados; III - Correção de dados
           incompletos, inexatos ou desatualizados; IV - Anonimização, bloqueio
           ou eliminação de dados desnecessários, excessivos ou tratados em

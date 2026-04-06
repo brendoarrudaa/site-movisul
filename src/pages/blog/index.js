@@ -13,7 +13,7 @@ const Post = ({ posts }) => {
     <BlogLayout>
       <Head>
         {generateNextSeo({
-          title: 'Nosso Blog | Movisul',
+          title: 'Nosso Blog | MoviSul',
           description:
             'Conteúdo técnico sobre Saúde e Segurança do Trabalho: PGR, PCMSO, eSocial, laudos, treinamentos e muito mais.',
           canonical: 'https://movisul.com/blog',
@@ -23,7 +23,7 @@ const Post = ({ posts }) => {
                 url: 'https://movisul.com/assets/img/movisul-icon.png',
                 width: 1200,
                 height: 630,
-                alt: 'Movisul Blog'
+                alt: 'MoviSul Blog'
               }
             ]
           }

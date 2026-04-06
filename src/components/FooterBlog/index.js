@@ -26,7 +26,7 @@ const FooterBlog = () => {
                     ? '/assets/img/logo-dark.png'
                     : '/assets/img/logo-light.png'
                 }
-                alt="Movisul"
+                alt="MoviSul"
                 width={85}
                 height={40}
                 sizes="85px"
