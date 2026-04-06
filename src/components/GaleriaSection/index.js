@@ -12,14 +12,54 @@ const categories = [
 ]
 
 const placeholders = [
-  { src: '/assets/img/servicos-video.gif', alt: 'Inspeção de segurança em campo', caption: '', category: 'Segurança do Trabalho' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Avaliação ambiental em área de operação', caption: '', category: 'Meio Ambiente' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Análise ergonômica do posto de trabalho', caption: '', category: 'Ergonomia' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Gestão dos eventos SST no eSocial', caption: '', category: 'SST no eSocial' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Medição de agentes físicos — higiene ocupacional', caption: '', category: 'Higiene Ocupacional' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Treinamento NR-35 — trabalho em altura', caption: '', category: 'Cursos e Treinamentos' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Auditoria de conformidade com NRs', caption: '', category: 'Segurança do Trabalho' },
-  { src: '/assets/img/hero-bg.jpg', alt: 'Programa de monitoramento ambiental', caption: '', category: 'Meio Ambiente' }
+  {
+    src: '/assets/img/servicos-video.gif',
+    alt: 'Inspeção de segurança em campo',
+    caption: '',
+    category: 'Segurança do Trabalho'
+  },
+  {
+    src: '/assets/img/hero-bg.jpg',
+    alt: 'Avaliação ambiental em área de operação',
+    caption: '',
+    category: 'Meio Ambiente'
+  },
+  {
+    src: '/assets/img/hero-bg.jpg',
+    alt: 'Análise ergonômica do posto de trabalho',
+    caption: '',
+    category: 'Ergonomia'
+  },
+  {
+    src: '/assets/img/hero-bg.jpg',
+    alt: 'Gestão dos eventos SST no eSocial',
+    caption: '',
+    category: 'SST no eSocial'
+  },
+  {
+    src: '/assets/img/hero-bg.jpg',
+    alt: 'Medição de agentes físicos — higiene ocupacional',
+    caption: '',
+    category: 'Higiene Ocupacional'
+  },
+  {
+    src: '/assets/img/hero-bg.jpg',
+    alt: 'Treinamento NR-35 — trabalho em altura',
+    caption: '',
+    category: 'Cursos e Treinamentos'
+  },
+  {
+    src: '/assets/img/hero-bg.jpg',
+    alt: 'Auditoria de conformidade com NRs',
+    caption: '',
+    category: 'Segurança do Trabalho'
+  },
+  {
+    src: '/assets/img/hero-bg.jpg',
+    alt: 'Programa de monitoramento ambiental',
+    caption: '',
+    category: 'Meio Ambiente'
+  }
 ]
 
 const GaleriaSection = ({ photos = [] }) => {
@@ -35,11 +75,11 @@ const GaleriaSection = ({ photos = [] }) => {
     <section id="galeria" className="py-14 sm:py-20 bg-white dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Cabeçalho */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0f4c81]/5 dark:bg-[#63b3ed]/10 text-sm font-semibold text-[#0f4c81] dark:text-[#63b3ed] uppercase tracking-widest mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-12 pt-8">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0f4c81]/5 dark:bg-[#63b3ed]/10 text-xl md:text-2xl font-semibold text-[#0f4c81] dark:text-[#63b3ed] uppercase tracking-widest mb-4">
             Galeria
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1a202c] dark:text-gray-100 leading-tight">
+          <h2 className="text-3xl pt-4 sm:text-4xl font-bold text-[#1a202c] dark:text-gray-100 leading-tight">
             Mais do que consultoria, promovemos uma{' '}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-[#0f4c81] to-[#2a9d6e]">
               cultura de segurança
@@ -59,7 +99,7 @@ const GaleriaSection = ({ photos = [] }) => {
                 <li key={cat}>
                   <button
                     onClick={() => setActiveCategory(cat)}
-                    className={`w-full text-left text-sm font-medium px-4 py-2.5 rounded-xl transition-all duration-200 ${
+                    className={`w-full cursor-pointer text-left text-sm font-medium px-4 py-2.5 rounded-xl transition-all duration-200 ${
                       activeCategory === cat
                         ? 'bg-[#0f4c81] text-white shadow-md shadow-[#0f4c81]/20'
                         : 'text-[#4a5568] dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'

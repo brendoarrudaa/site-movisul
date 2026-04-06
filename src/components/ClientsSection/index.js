@@ -7,7 +7,8 @@ const clients = [
   { name: 'Guerdal', logo: '/assets/img/Guerdal.png' },
   { name: 'Bracell', logo: '/assets/img/Bracell.png' },
   { name: 'ADM do Brasil', logo: '/assets/img/ADMdoBrasil.png' },
-  { name: 'Bom Jesus', logo: '/assets/img/BomJesus.png' }
+  { name: 'Bom Jesus', logo: '/assets/img/BomJesus.png' },
+  { name: 'Suzano Papel Logo', logo: '/assets/img/SuzanoPapelLogo.png' }
 ]
 
 const ClientsSection = () => {
@@ -93,7 +94,7 @@ const ClientsSection = () => {
               {/* Logo sempre com fundo branco para visibilidade */}
               <div
                 className="relative shrink-0 bg-white rounded-lg"
-                style={{ width: '56px', height: '40px' }}
+                style={{ width: '116px', height: '70px' }}
               >
                 <Image
                   src={client.logo}
@@ -103,9 +104,6 @@ const ClientsSection = () => {
                   className="object-contain"
                 />
               </div>
-              <span className="text-sm font-semibold text-[#1a202c] whitespace-nowrap max-w-32.5 leading-tight">
-                {client.name}
-              </span>
             </div>
           ))}
         </div>

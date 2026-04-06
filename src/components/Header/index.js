@@ -7,7 +7,7 @@ import { Menu, X, Sun, Moon } from 'lucide-react'
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/#about', label: 'Sobre' },
-  { href: '/#galeria', label: 'Galeria' },
+  { href: '/galeria', label: 'Galeria' },
   { href: '/#equipe', label: 'Equipe' },
   { href: '/#services', label: 'Serviços' },
   { href: '/#contato', label: 'Contato' },
