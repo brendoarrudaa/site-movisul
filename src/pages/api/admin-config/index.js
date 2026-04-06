@@ -63,6 +63,30 @@ collections:
           - Saude Ocupacional
           - Prevencao
       - { label: "Conteudo", name: "body", widget: "markdown" }
+
+  - name: gallery
+    label: Galeria de Fotos
+    folder: gallery
+    create: true
+    slug: "{{slug}}"
+    media_folder: "/public/assets/img-gallery"
+    public_folder: "/assets/img-gallery"
+    fields:
+      - { label: "Título (identificador interno)", name: "title", widget: "string", hint: "Ex: inspecao-campo-2024 — vira o nome do arquivo" }
+      - { label: "Foto", name: "image", widget: "image" }
+      - { label: "Descrição da foto (alt)", name: "alt", widget: "string", hint: "Ex: Técnico realizando inspeção de EPI em campo" }
+      - { label: "Legenda (opcional)", name: "caption", widget: "string", required: false }
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options:
+          - Segurança do Trabalho
+          - Meio Ambiente
+          - Ergonomia
+          - SST no eSocial
+          - Higiene Ocupacional
+          - Cursos e Treinamentos
+      - { label: "Ordem de exibição", name: "order", widget: "number", default: 99, required: false, hint: "Menor número aparece primeiro" }
 `.trimStart()
 
 function buildConfig() {
