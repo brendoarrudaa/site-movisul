@@ -13,8 +13,8 @@ const HeroSection = () => {
         priority
         className="object-cover"
       />
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-linear-to-r from-[#0a2e4f]/90 via-[#0f4c81]/80 to-[#0a2e4f]/60" />
+      {/* Overlay mais escuro para melhor legibilidade */}
+      <div className="absolute inset-0 bg-linear-to-r from-[#030f1c]/95 via-[#071e34]/90 to-[#0a2e4f]/75" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-32 sm:py-32">
         <div className="max-w-3xl">
@@ -25,7 +25,9 @@ const HeroSection = () => {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white mb-6"
+            style={{ textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}
+          >
             Gestão Inteligente em{' '}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-[#34c785] to-[#2a9d6e]">
               Saúde e Segurança
@@ -33,7 +35,19 @@ const HeroSection = () => {
             do Trabalho
           </h1>
 
-          <p className="text-lg md:text-xl text-white/75 max-w-2xl mb-10 leading-relaxed">
+          {/* Tagline comercial em destaque */}
+          <p
+            className="text-2xl md:text-3xl font-extrabold text-[#34c785] mb-5 leading-tight"
+            style={{ textShadow: '0 2px 16px rgba(0,0,0,0.6)' }}
+          >
+            Protegendo pessoas.{' '}
+            <span className="text-white">Fortalecendo negócios!</span>
+          </p>
+
+          <p
+            className="text-lg md:text-xl text-white/90 max-w-2xl mb-10 leading-relaxed"
+            style={{ textShadow: '0 1px 6px rgba(0,0,0,0.5)' }}
+          >
             Soluções completas para empresas que valorizam segurança,
             performance e conformidade. Atuação em todo o Brasil com mais de 16
             anos de experiência.
@@ -49,7 +63,7 @@ const HeroSection = () => {
             </Link>
             <Link
               href="/#services"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 hover:bg-white/10 text-white font-semibold px-8 py-4 text-base transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 hover:bg-white/10 text-white font-semibold px-8 py-4 text-base transition-colors duration-200"
             >
               Conheça nossos serviços
             </Link>
@@ -61,11 +75,11 @@ const HeroSection = () => {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
         <a
           href="/#about"
-          className="flex flex-col items-center gap-2 text-white/40 hover:text-white/60 transition-colors"
+          className="flex flex-col items-center gap-2 text-white/50 hover:text-white/70 transition-colors"
         >
           <span className="text-xs tracking-wider">SCROLL</span>
-          <div className="w-5 h-8 rounded-full border-2 border-white/30 flex items-start justify-center p-1">
-            <div className="w-1 h-2 rounded-full bg-white/60 animate-bounce" />
+          <div className="w-5 h-8 rounded-full border-2 border-white/40 flex items-start justify-center p-1">
+            <div className="w-1 h-2 rounded-full bg-white/70 animate-bounce" />
           </div>
         </a>
       </div>

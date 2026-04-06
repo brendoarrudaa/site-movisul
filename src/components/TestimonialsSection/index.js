@@ -3,16 +3,16 @@ import { Quote } from 'lucide-react'
 
 const testimonials = [
   {
-    company: 'Norsk Hydro',
-    text: 'MoviSul é uma empresa experiente e eficiente, especialista em segurança e saúde ocupacional. Demonstrou domínio de ferramentas de gestão, implementou controles e soluções eficazes que minimizaram riscos e melhoraram práticas de segurança.'
-  },
-  {
     company: 'EMFLORA Empreendimentos Florestais',
-    text: 'Movisul é uma empresa extremamente dedicada e comprometida com a segurança e a qualidade no trabalho industrial. A empresa tem uma excelente capacidade de identificar e resolver problemas com agilidade e eficiência. Destacam-se por seus métodos eficazes de prevenção de acidentes e gestão de segurança no ambiente de trabalho, além de seu vasto conhecimento nas áreas de Segurança e Meio Ambiente Ocupacional.'
+    text: 'MoviSul é uma empresa extremamente dedicada e comprometida com a segurança e a qualidade no trabalho industrial. A empresa tem uma excelente capacidade de identificar e resolver problemas com agilidade e eficiência. Destacam-se por seus métodos eficazes de prevenção de acidentes e gestão de segurança no ambiente de trabalho, além de seu vasto conhecimento nas áreas de Segurança e Meio Ambiente Ocupacional.'
   },
   {
     company: 'Hydro Mineração',
     text: 'MoviSul é uma empresa comprometida e com excelente capacidade de comunicação. Muito eficaz na gestão de Saúde e Segurança do Trabalho. Empresa pontual, prestativa e proativa.'
+  },
+  {
+    company: 'Suzano Papel e Celulose',
+    text: 'A MoviSul demonstrou alto nível técnico na implantação e gestão dos programas de SST. Profissionais qualificados, soluções práticas e comprometimento com os resultados — um parceiro estratégico para a nossa operação.'
   }
 ]
 

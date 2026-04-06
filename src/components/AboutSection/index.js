@@ -45,7 +45,7 @@ const AboutSection = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="py-14 sm:py-20 bg-[#f7fafc] dark:bg-gray-900"
+      className="py-14 sm:py-20 bg-gray-100 dark:bg-[#071e34]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -81,7 +81,7 @@ const AboutSection = () => {
             {pillars.map(({ Icon, title, desc }, i) => (
               <div
                 key={i}
-                className="fade-up opacity-0 translate-y-6 transition-[opacity,transform,box-shadow,border-color] duration-700 ease-out group bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-[#0f4c81]/20 flex flex-col gap-3"
+                className="fade-up opacity-0 translate-y-6 transition-[opacity,transform,box-shadow,border-color] duration-700 ease-out group bg-white dark:bg-[#0d3f6b] rounded-2xl p-6 border border-gray-200 dark:border-[#1a5a96]/40 shadow-md hover:shadow-xl hover:border-[#0f4c81]/40 dark:hover:border-[#34c785]/40 flex flex-col gap-3"
                 style={{ transitionDelay: `${(i + 3) * 100}ms` }}
               >
                 <div className="w-11 h-11 rounded-xl bg-[#0f4c81]/8 dark:bg-[#63b3ed]/10 flex items-center justify-center text-[#0f4c81] dark:text-[#63b3ed] group-hover:bg-[#0f4c81] group-hover:text-white transition-all duration-300">

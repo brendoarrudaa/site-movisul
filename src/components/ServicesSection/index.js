@@ -122,7 +122,7 @@ const ServicesSection = () => {
                     <h3 className="text-xl font-bold text-[#1a202c] dark:text-gray-100 mb-1">
                       {title}
                     </h3>
-                    <span className="text-sm font-medium text-[#2a9d6e] mb-3 block">
+                    <span className="text-sm font-semibold text-[#2a9d6e] mb-3 block leading-tight tracking-wide uppercase">
                       {subtitle}
                     </span>
                     <p className="text-[#718096] dark:text-gray-400 leading-relaxed text-sm">

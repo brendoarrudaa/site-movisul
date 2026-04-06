@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 const clients = [
-{ name: 'Suzano', logo: '/assets/img/Suzano.png' },
+  { name: 'Suzano Papel e Celulose', logo: '/assets/img/Suzano.png' },
   { name: 'Hydro Mineração', logo: '/assets/img/HydroMineracao.png' },
   { name: 'Guerdal', logo: '/assets/img/Guerdal.png' },
   { name: 'Bracell', logo: '/assets/img/Bracell.png' },
@@ -87,23 +87,25 @@ const ClientsSection = () => {
           {doubled.map((client, i) => (
             <div
               key={i}
-              className="flex items-center justify-center bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-[#0f4c81]/20 transition-all duration-300"
-              style={{
-                width: '180px',
-                height: '100px',
-                flexShrink: 0,
-                padding: '16px 20px'
-              }}
+              className="flex items-center gap-3 bg-white rounded-2xl border border-gray-200 shadow-md hover:shadow-lg hover:border-[#0f4c81]/20 transition-all duration-300 px-5 py-3"
+              style={{ flexShrink: 0 }}
             >
-              <div className="relative w-full h-full">
+              {/* Logo sempre com fundo branco para visibilidade */}
+              <div
+                className="relative shrink-0 bg-white rounded-lg"
+                style={{ width: '56px', height: '40px' }}
+              >
                 <Image
                   src={client.logo}
                   alt={client.name}
                   fill
-                  sizes="180px"
+                  sizes="56px"
                   className="object-contain"
                 />
               </div>
+              <span className="text-sm font-semibold text-[#1a202c] whitespace-nowrap max-w-32.5 leading-tight">
+                {client.name}
+              </span>
             </div>
           ))}
         </div>
