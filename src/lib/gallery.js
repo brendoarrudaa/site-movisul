@@ -16,12 +16,14 @@ export function getAllGalleryPhotos() {
       const { data } = matter(fileContents)
       return {
         src: data.image || '',
-        alt: data.alt || '',
+        alt: data.alt || data.title || '',
+        caption: data.caption || '',
         category: data.category || 'Segurança do Trabalho',
-        order: data.order ?? 99
+        order: typeof data.order === 'number' ? data.order : 99
       }
     })
-    .filter(p => p.src)
+    // Ignora arquivos sem imagem definida ou que sejam apenas exemplos
+    .filter(p => p.src && !p.src.includes('nome-da-foto'))
     .sort((a, b) => a.order - b.order)
 
   return photos

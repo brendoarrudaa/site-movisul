@@ -80,8 +80,10 @@ collections:
     media_folder: '/public/assets/img-gallery'
     public_folder: '/assets/img-gallery'
     fields:
+      - { label: 'Título (identificador interno)', name: 'title', widget: 'string', hint: 'Ex: inspeção-campo-2024 — usado como nome do arquivo' }
       - { label: 'Foto', name: 'image', widget: 'image' }
-      - { label: 'Descrição (alt)', name: 'alt', widget: 'string' }
+      - { label: 'Descrição da foto (alt)', name: 'alt', widget: 'string', hint: 'Descreva o que aparece na foto. Ex: Técnico realizando inspeção de EPI em campo' }
+      - { label: 'Legenda (opcional)', name: 'caption', widget: 'string', required: false }
       - label: 'Categoria'
         name: 'category'
         widget: 'select'
@@ -92,4 +94,4 @@ collections:
           - SST no eSocial
           - Higiene Ocupacional
           - Cursos e Treinamentos
-      - { label: 'Ordem', name: 'order', widget: 'number', default: 99, required: false }
+      - { label: 'Ordem de exibição', name: 'order', widget: 'number', default: 99, required: false, hint: 'Menor número aparece primeiro' }
