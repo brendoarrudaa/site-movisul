@@ -71,3 +71,25 @@ collections:
           - Saude Ocupacional
           - Prevencao
       - { label: 'Conteudo', name: 'body', widget: 'markdown' }
+
+  - name: gallery
+    label: Galeria de Fotos
+    folder: gallery
+    create: true
+    slug: '{{slug}}'
+    media_folder: '/public/assets/img-gallery'
+    public_folder: '/assets/img-gallery'
+    fields:
+      - { label: 'Foto', name: 'image', widget: 'image' }
+      - { label: 'Descrição (alt)', name: 'alt', widget: 'string' }
+      - label: 'Categoria'
+        name: 'category'
+        widget: 'select'
+        options:
+          - Segurança do Trabalho
+          - Meio Ambiente
+          - Ergonomia
+          - SST no eSocial
+          - Higiene Ocupacional
+          - Cursos e Treinamentos
+      - { label: 'Ordem', name: 'order', widget: 'number', default: 99, required: false }

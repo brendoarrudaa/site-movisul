@@ -15,6 +15,7 @@ import BlogPreviewSection from 'components/BlogPreviewSection'
 import GaleriaSection from 'components/GaleriaSection'
 import EquipeSection from 'components/EquipeSection'
 import { getAllPosts } from 'lib/api'
+import { getAllGalleryPhotos } from 'lib/gallery'
 
 const organizationSchema = {
   '@context': 'https://schema.org',
@@ -52,7 +53,7 @@ const organizationSchema = {
   ]
 }
 
-const Home = ({ recentPosts }) => {
+const Home = ({ recentPosts, galleryPhotos }) => {
   return (
     <Layout>
       <Head>
@@ -87,7 +88,7 @@ const Home = ({ recentPosts }) => {
       <HowItWorksSection />
       <ClientsSection />
       <TestimonialsSection />
-      <GaleriaSection />
+      <GaleriaSection photos={galleryPhotos} />
       <EquipeSection />
       <MissionSection />
       <BlogPreviewSection posts={recentPosts} />
@@ -106,7 +107,9 @@ export async function getStaticProps() {
     description: post.frontmatter.description
   }))
 
-  return { props: { recentPosts } }
+  const galleryPhotos = getAllGalleryPhotos()
+
+  return { props: { recentPosts, galleryPhotos } }
 }
 
 export default Home

@@ -11,58 +11,25 @@ const categories = [
   'Cursos e Treinamentos'
 ]
 
-// Estrutura de placeholder para fotos reais a serem inseridas pelo cliente.
-// Substituir os objetos abaixo com { src, alt, category } reais quando disponíveis.
-const photos = [
-  {
-    src: '/assets/img/servicos-video.gif',
-    alt: 'Inspeção de segurança em campo',
-    category: 'Segurança do Trabalho'
-  },
-  {
-    src: '/assets/img/hero-bg.jpg',
-    alt: 'Avaliação ambiental em área de operação',
-    category: 'Meio Ambiente'
-  },
-  {
-    src: '/assets/img/hero-bg.jpg',
-    alt: 'Análise ergonômica do posto de trabalho',
-    category: 'Ergonomia'
-  },
-  {
-    src: '/assets/img/hero-bg.jpg',
-    alt: 'Gestão dos eventos SST no eSocial',
-    category: 'SST no eSocial'
-  },
-  {
-    src: '/assets/img/hero-bg.jpg',
-    alt: 'Medição de agentes físicos — higiene ocupacional',
-    category: 'Higiene Ocupacional'
-  },
-  {
-    src: '/assets/img/hero-bg.jpg',
-    alt: 'Treinamento NR-35 — trabalho em altura',
-    category: 'Cursos e Treinamentos'
-  },
-  {
-    src: '/assets/img/hero-bg.jpg',
-    alt: 'Auditoria de conformidade com NRs',
-    category: 'Segurança do Trabalho'
-  },
-  {
-    src: '/assets/img/hero-bg.jpg',
-    alt: 'Programa de monitoramento ambiental',
-    category: 'Meio Ambiente'
-  }
+const placeholders = [
+  { src: '/assets/img/servicos-video.gif', alt: 'Inspeção de segurança em campo', category: 'Segurança do Trabalho' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Avaliação ambiental em área de operação', category: 'Meio Ambiente' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Análise ergonômica do posto de trabalho', category: 'Ergonomia' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Gestão dos eventos SST no eSocial', category: 'SST no eSocial' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Medição de agentes físicos — higiene ocupacional', category: 'Higiene Ocupacional' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Treinamento NR-35 — trabalho em altura', category: 'Cursos e Treinamentos' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Auditoria de conformidade com NRs', category: 'Segurança do Trabalho' },
+  { src: '/assets/img/hero-bg.jpg', alt: 'Programa de monitoramento ambiental', category: 'Meio Ambiente' }
 ]
 
-const GaleriaSection = () => {
+const GaleriaSection = ({ photos = [] }) => {
+  const allPhotos = photos.length > 0 ? photos : placeholders
   const [activeCategory, setActiveCategory] = useState('Todos')
 
   const filtered =
     activeCategory === 'Todos'
-      ? photos
-      : photos.filter(p => p.category === activeCategory)
+      ? allPhotos
+      : allPhotos.filter(p => p.category === activeCategory)
 
   return (
     <section id="galeria" className="py-14 sm:py-20 bg-white dark:bg-gray-950">
