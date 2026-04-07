@@ -3,12 +3,12 @@ import { Quote } from 'lucide-react'
 
 const testimonials = [
   {
-    company: 'EMFLORA Empreendimentos Florestais',
-    text: 'MoviSul é uma empresa extremamente dedicada e comprometida com a segurança e a qualidade no trabalho industrial. A empresa tem uma excelente capacidade de identificar e resolver problemas com agilidade e eficiência. Destacam-se por seus métodos eficazes de prevenção de acidentes e gestão de segurança no ambiente de trabalho, além de seu vasto conhecimento nas áreas de Segurança e Meio Ambiente Ocupacional.'
-  },
-  {
     company: 'Hydro Mineração',
     text: 'MoviSul é uma empresa comprometida e com excelente capacidade de comunicação. Muito eficaz na gestão de Saúde e Segurança do Trabalho. Empresa pontual, prestativa e proativa.'
+  },
+  {
+    company: 'EMFLORA Empreendimentos Florestais',
+    text: 'MoviSul é uma empresa extremamente dedicada e comprometida com a segurança e a qualidade no trabalho industrial. A empresa tem uma excelente capacidade de identificar e resolver problemas com agilidade e eficiência. Destacam-se por seus métodos eficazes de prevenção de acidentes e gestão de segurança no ambiente de trabalho, além de seu vasto conhecimento nas áreas de Segurança e Meio Ambiente Ocupacional.'
   },
   {
     company: 'Suzano Papel e Celulose',

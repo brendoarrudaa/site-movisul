@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import Link from 'next/link'
 import { UserCircle } from 'lucide-react'
 
 // Dados de placeholder — substituir com fotos e informações reais de cada membro.
@@ -109,9 +110,15 @@ const EquipeSection = () => {
               <p className="text-sm font-medium text-[#0f4c81] dark:text-[#63b3ed] mb-2">
                 {role}
               </p>
-              <span className="inline-block text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-[#071e34]/60 rounded-full px-3 py-1">
+              <span className="inline-block text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-[#071e34]/60 rounded-full px-3 py-1 mb-4">
                 {specialty}
               </span>
+              <Link
+                href="/sobre"
+                className="mt-auto inline-flex items-center justify-center w-full rounded-full border border-[#0f4c81] text-[#0f4c81] dark:border-[#63b3ed] dark:text-[#63b3ed] hover:bg-[#0f4c81] hover:text-white dark:hover:bg-[#63b3ed] dark:hover:text-[#071e34] text-sm font-medium py-2 transition-colors duration-200"
+              >
+                Saiba mais
+              </Link>
             </div>
           ))}
         </div>
