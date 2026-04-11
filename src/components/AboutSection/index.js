@@ -55,24 +55,24 @@ const AboutSection = () => {
               Sobre a MoviSul
             </span>
             <h2 className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-100 ease-out text-3xl sm:text-4xl font-bold text-[#1a202c] dark:text-gray-100 mb-6">
-              Uma história de{' '}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#0f4c81] to-[#2a9d6e]">
-                crescimento
-              </span>{' '}
-              e excelência
+              Uma história de crescimento e excelência
             </h2>
-            <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-200 ease-out text-[#4a5568] dark:text-gray-400 leading-relaxed mb-6">
-              A MoviSul é especialista em Gestão de Saúde e Segurança do
-              Trabalho, atuando em diversos estados do Brasil com soluções
-              práticas, tecnológicas e eficientes. Nosso diferencial está na
-              atuação direta no campo, identificando riscos reais e promovendo
-              melhorias contínuas nos processos.
+            <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-200 ease-out text-[#4a5568] dark:text-white leading-relaxed mb-6">
+              A MoviSul é uma empresa fundada, com foco em Gestão Saúde e
+              Segurança do Trabalho. Desde o início, a empresa tem se destacado
+              pelo desenvolvimento e utilização das mais avançadas técnicas e
+              tecnologias, sempre buscando entregar resultados de excelência e
+              duradouros para seus clientes. Com base em um trabalho de alto
+              nível e uma orientação voltada à melhoria contínua em Saúde e
+              Segurança do Trabalho, que faz parte do DNA da marca, a MoviSul
+              cresceu significativamente ao longo dos anos. Já atuamos em vários
+              estados brasileiros, atendendo clientes de diversos setores e
+              regiões do país, consolidando sua atuação em grande parte do
+              território nacional.
             </p>
-            <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-300 ease-out text-[#4a5568] dark:text-gray-400 leading-relaxed">
-              Com base em um trabalho de alto nível e uma orientação voltada à
-              melhoria contínua, a MoviSul cresceu significativamente, atendendo
-              grandes players como Vale Florestar, Suzano, Hydro Mineração,
-              Bracell e ADM do Brasil.
+            <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-300 ease-out text-[#4a5568] dark:text-white leading-relaxed">
+              As caixas de proteção à vida, visão prática a cor tem que ser
+              diferente do fundo, pra destaque .
             </p>
           </div>
 

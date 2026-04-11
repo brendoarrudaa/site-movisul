@@ -25,23 +25,19 @@ const HeroSection = () => {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white mb-6"
+          <h1
+            className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white mb-6"
             style={{ textShadow: '0 2px 12px rgba(0,0,0,0.5)' }}
           >
-            Gestão Inteligente em{' '}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#34c785] to-[#2a9d6e]">
-              Saúde e Segurança
-            </span>{' '}
-            do Trabalho
+            Gestão Inteligente em Saúde e Segurança do Trabalho
           </h1>
 
           {/* Tagline comercial em destaque */}
           <p
-            className="text-2xl md:text-3xl font-extrabold text-[#34c785] mb-5 leading-tight"
+            className="text-2xl md:text-3xl font-extrabold text-white mb-5 leading-tight"
             style={{ textShadow: '0 2px 16px rgba(0,0,0,0.6)' }}
           >
-            Protegendo pessoas.{' '}
-            <span className="text-white">Fortalecendo negócios!</span>
+            Protegendo pessoas. Fortalecendo negócios!
           </p>
 
           <p
