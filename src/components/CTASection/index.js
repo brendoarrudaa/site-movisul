@@ -39,7 +39,7 @@ const CTASection = () => {
         <h2 className="fade-up opacity-0 translate-y-6 transition-all duration-700 ease-out text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
           Pronto para elevar o nível de segurança da sua empresa?
         </h2>
-        <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-100 ease-out text-lg text-white/70 mb-10 leading-relaxed">
+        <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-100 ease-out text-lg text-white/70 dark:text-white mb-10 leading-relaxed">
           Solicite um diagnóstico gratuito e receba uma proposta personalizada
           em até 24 horas. Sem compromisso.
         </p>
@@ -63,7 +63,7 @@ const CTASection = () => {
           </a>
         </div>
 
-        <div className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-300 ease-out mt-8 flex items-center justify-center gap-6 text-white/40 text-sm flex-wrap">
+        <div className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-300 ease-out mt-8 flex items-center justify-center gap-6 text-white/40 dark:text-white text-sm flex-wrap">
           <span className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#34c785]" />
             Diagnóstico gratuito
