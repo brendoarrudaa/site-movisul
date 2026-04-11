@@ -71,13 +71,9 @@ const EquipeSection = () => {
             Nossa Equipe
           </span>
           <h2 className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-100 ease-out text-3xl sm:text-4xl font-bold text-[#1a202c] dark:text-gray-100">
-            Profissionais{' '}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#0f4c81] to-[#2a9d6e]">
-              multidisciplinares
-            </span>{' '}
-            à sua disposição
+            Profissionais multidisciplinares à sua disposição
           </h2>
-          <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-200 ease-out mt-4 text-lg text-[#4a5568] dark:text-gray-400">
+          <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-200 ease-out mt-4 text-lg text-[#4a5568] dark:text-white">
             Engenheiros, médicos, técnicos e especialistas unidos por um único
             objetivo: a segurança da sua equipe.
           </p>
@@ -100,7 +96,10 @@ const EquipeSection = () => {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <UserCircle className="w-14 h-14 text-white/80" strokeWidth={1} />
+                  <UserCircle
+                    className="w-14 h-14 text-white/80"
+                    strokeWidth={1}
+                  />
                 )}
               </div>
 
