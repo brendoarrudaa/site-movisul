@@ -88,8 +88,7 @@ const ServicesSection = () => {
             Serviços
           </span>
           <h2 className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-100 ease-out text-3xl sm:text-4xl font-bold text-[#1a202c] dark:text-gray-100">
-            Soluções completas em{' '}
-            <span className="text-[#0f4c81] dark:text-[#63b3ed]">SST</span>
+            Soluções completas em SST
           </h2>
           <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-200 ease-out mt-4 text-lg text-[#4a5568] dark:text-gray-400">
             Cobrimos todas as necessidades da sua empresa em Saúde e Segurança
@@ -122,10 +121,10 @@ const ServicesSection = () => {
                     <h3 className="text-xl font-bold text-[#1a202c] dark:text-gray-100 mb-1">
                       {title}
                     </h3>
-                    <span className="text-sm font-semibold text-[#2a9d6e] mb-3 block leading-tight tracking-wide uppercase">
+                    <span className="text-sm font-semibold text-[#2a9d6e] dark:text-white mb-3 block leading-tight tracking-wide uppercase">
                       {subtitle}
                     </span>
-                    <p className="text-[#718096] dark:text-gray-400 leading-relaxed text-sm">
+                    <p className="text-[#718096] dark:text-white leading-relaxed text-sm">
                       {description}
                     </p>
                   </div>
