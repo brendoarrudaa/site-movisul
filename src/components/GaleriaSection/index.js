@@ -80,18 +80,15 @@ const GaleriaSection = ({ photos = [] }) => {
             Galeria
           </span>
           <h2 className="text-3xl pt-4 sm:text-4xl font-bold text-[#1a202c] dark:text-gray-100 leading-tight">
-            Mais do que consultoria, promovemos uma{' '}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#0f4c81] to-[#2a9d6e]">
-              cultura de segurança
-            </span>
-            , saúde e sustentabilidade
+            Mais do que consultoria, promovemos uma cultura de segurança , saúde
+            e sustentabilidade
           </h2>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Filtros laterais */}
           <aside className="lg:w-52 shrink-0">
-            <p className="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-3 pl-1">
+            <p className="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-white mb-3 pl-1">
               Filtrar por
             </p>
             <ul className="flex flex-row flex-wrap lg:flex-col gap-2">
