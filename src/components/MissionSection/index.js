@@ -35,13 +35,10 @@ const MissionSection = () => {
         </span>
 
         <h2 className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-200 ease-out text-3xl sm:text-4xl font-bold text-[#1a202c] dark:text-gray-100 mb-8">
-          Gerar resultados{' '}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-[#0f4c81] to-[#2a9d6e]">
-            concretos
-          </span>
+          Gerar resultados concretos
         </h2>
 
-        <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-300 ease-out text-xl text-[#4a5568] dark:text-gray-400 leading-relaxed">
+        <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-300 ease-out text-xl text-[#4a5568] dark:text-white leading-relaxed">
           &ldquo;Gerar resultados concretos através da análise prática dos
           processos, promovendo ambientes mais seguros, produtivos e
           sustentáveis. Não fazemos gestão distante — vamos ao campo, ao chão de
