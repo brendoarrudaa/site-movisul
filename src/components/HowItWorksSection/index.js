@@ -68,7 +68,7 @@ const HowItWorksSection = () => {
           </span>
           <h2 className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-100 ease-out text-3xl sm:text-4xl font-bold text-white mb-4">
             Do diagnóstico ao{' '}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#34c785] to-[#2a9d6e]">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#34c785] to-[#2a9d6e] dark:text-white">
               resultado
             </span>
           </h2>
@@ -96,7 +96,7 @@ const HowItWorksSection = () => {
                 Passo {step}
               </span>
               <h3 className="font-semibold text-white mb-2">{title}</h3>
-              <p className="text-sm text-white/50 leading-relaxed">{desc}</p>
+              <p className="text-sm text-white leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>

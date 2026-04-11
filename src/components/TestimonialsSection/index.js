@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
           </span>
           <h2 className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-100 ease-out text-3xl sm:text-4xl font-bold text-[#1a202c] dark:text-gray-100">
             O que nossos clientes{' '}
-            <span className="text-[#0f4c81] dark:text-[#63b3ed]">dizem</span>
+            <span className="text-[#0f4c81] dark:text-white">dizem</span>
           </h2>
         </div>
 
