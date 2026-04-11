@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Prism from 'prismjs'
 import 'prismjs/themes/prism-tomorrow.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
@@ -33,10 +33,20 @@ import useWindowSize from 'hooks/useWindowSize'
 
 const BlogPost = ({ post }) => {
   const { width } = useWindowSize()
+  const [views, setViews] = useState(null)
 
   useEffect(() => {
     Prism.highlightAll()
   }, [post])
+
+  useEffect(() => {
+    if (!post?.slug) return
+
+    fetch(`/api/views/${post.slug}`, { method: 'POST' })
+      .then(r => r.json())
+      .then(d => setViews(d.views))
+      .catch(() => null)
+  }, [post?.slug])
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -106,6 +116,11 @@ const BlogPost = ({ post }) => {
         <ButtonBack href="/blog">← Voltar na listagem</ButtonBack>
         <PostDate>
           {post.frontmatter.formattedDate} • {timeToRead(post.content)}
+          {views !== null && (
+            <span style={{ marginLeft: '0.75rem', opacity: 0.7 }}>
+              • {views} {views === 1 ? 'visualização' : 'visualizações'}
+            </span>
+          )}
         </PostDate>
         <PostBanner>
           <S.PostImage>
