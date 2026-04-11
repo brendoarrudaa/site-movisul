@@ -15,7 +15,7 @@ const services = [
     subtitle: 'PGR, GRO, PCMSO',
     description:
       'PGR, GRO, PCMSO e programas completos de gerenciamento de riscos ocupacionais.',
-    color: '#0f4c81'
+    color: '#2a9d6e'
   },
   {
     Icon: FileText,
@@ -31,7 +31,7 @@ const services = [
     subtitle: 'SST Compliant',
     description:
       'Envio dos eventos S-2210, S-2220 e S-2240 com gestão integrada e especializada.',
-    color: '#0f4c81'
+    color: '#2a9d6e'
   },
   {
     Icon: HardHat,
@@ -47,7 +47,7 @@ const services = [
     subtitle: 'Capacitação Profissional',
     description:
       'Mais de 60 cursos e treinamentos regulamentares, do NR-01 ao NR-35.',
-    color: '#0f4c81'
+    color: '#2a9d6e'
   },
   {
     Icon: Flame,
