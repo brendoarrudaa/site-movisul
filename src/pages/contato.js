@@ -24,6 +24,8 @@ const contactInfo = [
   }
 ]
 
+const WHATSAPP_NUMBER = '5566997188890'
+
 const ContatoPage = () => {
   const [form, setForm] = useState({
     nome: '',
@@ -31,34 +33,70 @@ const ContatoPage = () => {
     celular: '',
     assunto: ''
   })
-  const [status, setStatus] = useState(null)
+  const [showModal, setShowModal] = useState(false)
 
   const handleChange = e => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = async e => {
+  const handleSubmit = e => {
     e.preventDefault()
-    setStatus('sending')
-    try {
-      const res = await fetch('/api/contato', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form)
-      })
-      if (res.ok) {
-        setStatus('success')
-        setForm({ nome: '', email: '', celular: '', assunto: '' })
-      } else {
-        setStatus('error')
-      }
-    } catch {
-      setStatus('error')
-    }
+
+    const message = [
+      `Olá! Vim pelo site da MoviSul e gostaria de entrar em contato.`,
+      ``,
+      `*Nome:* ${form.nome}`,
+      `*E-mail:* ${form.email}`,
+      form.celular ? `*Celular:* ${form.celular}` : null,
+      `*Assunto:* ${form.assunto}`
+    ]
+      .filter(line => line !== null)
+      .join('\n')
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+    window.open(url, '_blank', 'noopener,noreferrer')
+
+    setShowModal(true)
+    setForm({ nome: '', email: '', celular: '', assunto: '' })
   }
 
   return (
     <Layout>
+      {showModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4"
+          onClick={() => setShowModal(false)}
+        >
+          <div
+            className="bg-white dark:bg-[#0d3f6b] rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl"
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="w-16 h-16 rounded-full bg-[#2a9d6e]/15 flex items-center justify-center mx-auto mb-5">
+              <svg
+                className="w-8 h-8 text-[#2a9d6e]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-[#1a202c] dark:text-gray-100 mb-2">
+              Redirecionando para o WhatsApp!
+            </h3>
+            <p className="text-[#718096] dark:text-gray-400 text-sm leading-relaxed mb-6">
+              Sua mensagem foi preparada. Conclua o envio pelo WhatsApp e nossa equipe retornará em breve.
+            </p>
+            <button
+              onClick={() => setShowModal(false)}
+              className="w-full rounded-full bg-[#2a9d6e] hover:bg-[#238a5e] text-white font-semibold py-3 text-sm transition-colors duration-200"
+            >
+              Entendido
+            </button>
+          </div>
+        </div>
+      )}
       <Head>
         {generateNextSeo({
           title: 'Contato | MoviSul - Saúde e Segurança do Trabalho',
@@ -158,22 +196,10 @@ const ContatoPage = () => {
               />
               <button
                 type="submit"
-                disabled={status === 'sending'}
-                className="relative z-10 w-full rounded-full bg-[#2a9d6e] hover:bg-[#238a5e] disabled:opacity-60 text-white font-semibold py-4 text-sm shadow-lg shadow-[#2a9d6e]/30 transition-colors duration-200 mt-1"
+                className="relative z-10 w-full rounded-full bg-[#2a9d6e] hover:bg-[#238a5e] text-white font-semibold py-4 text-sm shadow-lg shadow-[#2a9d6e]/30 transition-colors duration-200 mt-1"
               >
-                {status === 'sending' ? 'Enviando…' : 'Enviar'}
+                Enviar pelo WhatsApp
               </button>
-
-              {status === 'success' && (
-                <p className="relative z-10 text-center text-[#34c785] text-sm font-medium">
-                  Mensagem enviada! Entraremos em contato em breve.
-                </p>
-              )}
-              {status === 'error' && (
-                <p className="relative z-10 text-center text-white/80 text-sm font-medium">
-                  Erro ao enviar. Tente novamente ou ligue para nós.
-                </p>
-              )}
             </form>
           </div>
         </div>
