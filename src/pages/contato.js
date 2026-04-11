@@ -181,6 +181,7 @@ const ContatoPage = () => {
                 type="tel"
                 name="celular"
                 placeholder="Celular"
+                maxLength={15}
                 value={form.celular}
                 onChange={handleChange}
                 className="relative z-10 w-full rounded-full bg-white/10 border border-white/20 text-white placeholder-white/50 px-5 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[#2a9d6e]/60 focus:bg-white/15 transition-all"
