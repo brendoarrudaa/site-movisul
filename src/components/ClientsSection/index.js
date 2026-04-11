@@ -67,10 +67,7 @@ const ClientsSection = () => {
           Clientes
         </span>
         <h2 className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-100 ease-out text-3xl sm:text-4xl font-bold text-[#1a202c] dark:text-gray-100 mb-4">
-          Empresas que confiam na{' '}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-[#0f4c81] to-[#2a9d6e] dark:text-white">
-            MoviSul
-          </span>
+          Empresas que confiam na MoviSul
         </h2>
         <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-200 ease-out text-lg text-[#4a5568] dark:text-white max-w-2xl mx-auto mb-12">
           Atendemos grandes empresas dos setores de mineração, construção,

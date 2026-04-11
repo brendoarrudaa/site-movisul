@@ -67,10 +67,7 @@ const HowItWorksSection = () => {
             Como funciona
           </span>
           <h2 className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-100 ease-out text-3xl sm:text-4xl font-bold text-white mb-4">
-            Do diagnóstico ao{' '}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#34c785] to-[#2a9d6e] dark:text-white">
-              resultado
-            </span>
+            Do diagnóstico ao resultado
           </h2>
           <p className="fade-up opacity-0 translate-y-6 transition-all duration-700 delay-200 ease-out text-lg text-white/60 max-w-xl mx-auto">
             Um processo simples e eficiente para garantir a segurança da sua
