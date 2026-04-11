@@ -197,6 +197,14 @@ const ContatoPage = () => {
                 onChange={handleChange}
                 className="relative z-10 w-full rounded-full bg-white/10 border border-white/20 text-white placeholder-white/50 px-5 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[#2a9d6e]/60 focus:bg-white/15 transition-all"
               />
+              <textarea
+                name="descricao"
+                placeholder="Descrição"
+                rows={4}
+                value={form.descricao}
+                onChange={handleChange}
+                className="relative z-10 w-full rounded-2xl bg-white/10 border border-white/20 text-white placeholder-white/50 px-5 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[#2a9d6e]/60 focus:bg-white/15 transition-all resize-none"
+              />
               <button
                 type="submit"
                 className="relative z-10 w-full rounded-full bg-[#2a9d6e] hover:bg-[#238a5e] text-white font-semibold py-4 text-sm shadow-lg shadow-[#2a9d6e]/30 transition-colors duration-200 mt-1"
