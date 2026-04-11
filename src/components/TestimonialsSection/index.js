@@ -56,9 +56,9 @@ const TestimonialsSection = () => {
               <Quote
                 size={40}
                 strokeWidth={1}
-                className="absolute top-6 right-6 text-[#0f4c81]/10 dark:text-[#63b3ed]/10"
+                className="absolute top-6 right-6 text-[#0f4c81]/10 dark:text-white"
               />
-              <p className="text-[#4a5568] dark:text-gray-400 leading-relaxed mb-6 italic">
+              <p className="text-[#4a5568] font-bold dark:text-white leading-relaxed mb-6 italic">
                 &ldquo;{t.text}&rdquo;
               </p>
               <div>
