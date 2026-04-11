@@ -31,7 +31,8 @@ const ContatoPage = () => {
     nome: '',
     email: '',
     celular: '',
-    assunto: ''
+    assunto: '',
+    descricao: ''
   })
   const [showModal, setShowModal] = useState(false)
 
@@ -48,7 +49,8 @@ const ContatoPage = () => {
       `*Nome:* ${form.nome}`,
       `*E-mail:* ${form.email}`,
       form.celular ? `*Celular:* ${form.celular}` : null,
-      `*Assunto:* ${form.assunto}`
+      `*Assunto:* ${form.assunto}`,
+      form.descricao ? `*Descrição:* ${form.descricao}` : null
     ]
       .filter(line => line !== null)
       .join('\n')
@@ -57,7 +59,7 @@ const ContatoPage = () => {
     window.open(url, '_blank', 'noopener,noreferrer')
 
     setShowModal(true)
-    setForm({ nome: '', email: '', celular: '', assunto: '' })
+    setForm({ nome: '', email: '', celular: '', assunto: '', descricao: '' })
   }
 
   return (
