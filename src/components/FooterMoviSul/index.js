@@ -4,7 +4,17 @@ import { useEffect, useState } from 'react'
 import { Phone, MapPin, Mail } from 'lucide-react'
 
 const InstagramIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5" aria-hidden="true">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="w-5 h-5"
+    aria-hidden="true"
+  >
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
     <circle cx="12" cy="12" r="4" />
     <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
@@ -12,7 +22,13 @@ const InstagramIcon = () => (
 )
 
 const LinkedInIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden="true">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className="w-5 h-5"
+    aria-hidden="true"
+  >
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
     <rect x="2" y="9" width="4" height="12" />
     <circle cx="4" cy="4" r="2" />
@@ -20,7 +36,13 @@ const LinkedInIcon = () => (
 )
 
 const TikTokIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden="true">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className="w-5 h-5"
+    aria-hidden="true"
+  >
     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.27 8.27 0 0 0 4.84 1.55V6.79a4.85 4.85 0 0 1-1.07-.1z" />
   </svg>
 )
@@ -75,7 +97,6 @@ const FooterMoviSul = () => {
     <footer className="bg-[#fcfcfc] dark:bg-[#072741] border-t border-gray-200/60 dark:border-gray-700/50 text-[#1f2937] dark:text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
           {/* Coluna 1 — Logo + tagline + redes sociais */}
           <div>
             <Link href="/" className="flex items-center mb-5">
@@ -94,7 +115,7 @@ const FooterMoviSul = () => {
                 style={{ width: '100px', height: '46px' }}
               />
             </Link>
-            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6">
+            <p className="text-gray-600 dark:text-white text-sm leading-relaxed mb-6">
               Saúde e Segurança do Trabalho —{' '}
               <span className="font-semibold text-[#0f4c81] dark:text-[#34c785]">
                 Protegendo pessoas. Fortalecendo negócios.
@@ -126,7 +147,7 @@ const FooterMoviSul = () => {
                 <li key={label}>
                   <Link
                     href={href}
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-[#0f4c81] dark:hover:text-[#34c785] transition-colors"
+                    className="text-sm text-gray-600 dark:text-white hover:text-[#0f4c81] dark:hover:text-[#34c785] transition-colors"
                   >
                     {label}
                   </Link>
@@ -143,7 +164,7 @@ const FooterMoviSul = () => {
             <ul className="space-y-2.5">
               {solutions.map(s => (
                 <li key={s}>
-                  <span className="text-sm text-gray-600 dark:text-gray-400">
+                  <span className="text-sm text-gray-600 dark:text-white">
                     {s}
                   </span>
                 </li>
@@ -192,7 +213,7 @@ const FooterMoviSul = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-gray-300/70 dark:border-gray-700 mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600 dark:text-gray-400">
+        <div className="border-t border-gray-300/70 dark:border-gray-700 mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600 dark:text-white">
           <p>
             &copy; {new Date().getFullYear()} MoviSul — Saúde &amp; Segurança do
             Trabalho. Todos os direitos reservados.
